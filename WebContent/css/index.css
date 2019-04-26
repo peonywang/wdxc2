@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+#header{
+    background:#093368;
+    color:#FFF;
+    padding: 0 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header .logo{
+    font-size: 28px;
+}
+#header .logo img{
+    vertical-align: middle;
+}
+#header a{
+    color: #FFF;
+}
+#header .search{
+    margin-right: auto;
+    margin-left: 1.5em;
+    padding: .3em 0.5em;
+    background: #dce5e3;
+    border-radius: 2em;
+    overflow: hidden;
+}
+#header .search:before{
+    font-family: font_family;
+    content: '\e60d';
+    color: #112136;
+}
+#header .search input{
+    vertical-align: middle;
+    border:none;
+    background: none;
+    width: 6em;
+}
+#header .nav{
+    display: flex;
+    align-items: center;
+    height: 82px;
+    font-size: 14px;
+}
+#header .nav > a{
+    padding: 0 20px;
+    white-space: nowrap;
+    line-height: 82px;
+    text-align: center;
+    margin-right: 1px;
+}
+#header .nav > a.act,
+#header .nav > a:hover{
+    background: #921d1d;
+}
+#header .nav .login{
+    border:1px solid #FFF;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+#header .nav .exit{
+    display: none;
+}
+
+#header .nav .shopCart:before{
+    font-family: font_family;
+    content: '\e60b';
+    margin-right: 0.3em;
+    font-size: 1.3em;
+}
+#header .nav .customer:before{
+    font-family: font_family;
+    content: '\e60c';
+    margin-right: 0.3em;
+    font-size: 1.3em;
+}
+#footer{
+    background: #6d7785;
+    color: #FFF;
+    text-align: center;
+    margin-top: 13px;
+    padding: 24px 0;
+    font-size: 12px;
+}
+#footer .s1{
+    display: inline-block;
+    color: #a9a9a9;
+    margin-top: 1em;
+}
+#footer .s1 + .s1{
+    margin-left: 2em;
+}
+
+/*index nav*/
+#indexNav{
+    background:#FFF;
+}
+#indexNav .nav{
+    /* padding:0 14px; */
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    font-size: 16px;
+    padding-top: .5em;
+}
+#indexNav .nav .act,
+#indexNav .nav a:hover{
+    border-bottom: 3px solid #921d1d;
+}
+/* index banner */
+#indexBan.swiper-container {
+    width: 100%;
+    height: 416px;
+}
+#indexBan .swiper-slide{
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#indexBan .swiper-pagination.w{
+    text-align: right;
+    width: 1195px;
+    left: 50%;
+    margin-left: -600px;
+}
+#indexBan .swiper-pagination-bullet{
+    width:10px;
+    height: 10px;
+}
