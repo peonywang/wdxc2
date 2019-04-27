@@ -24,6 +24,7 @@
     background: #dce5e3;
     border-radius: 2em;
     overflow: hidden;
+    flex-shrink: 0;
 }
 #header .search:before{
     font-family: font_family;
@@ -41,13 +42,18 @@
     align-items: center;
     height: 82px;
     font-size: 14px;
+    margin-left: 1em;
+    justify-content: flex-end;
+    flex: 1;
 }
 #header .nav > a{
-    padding: 0 20px;
+    /* padding: 0 20px; */
     white-space: nowrap;
     line-height: 82px;
     text-align: center;
     margin-right: 1px;
+    max-width: 6em;
+    flex: 1;
 }
 #header .nav > a.act,
 #header .nav > a:hover{
@@ -57,6 +63,7 @@
     border:1px solid #FFF;
     border-radius: 6px;
     padding: 4px 10px;
+    white-space: nowrap;
 }
 #header .nav .exit{
     display: none;
@@ -78,7 +85,7 @@
     background: #6d7785;
     color: #FFF;
     text-align: center;
-    margin-top: 13px;
+    margin-top: 16px;
     padding: 24px 0;
     font-size: 12px;
 }
@@ -117,10 +124,11 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 #indexBan .swiper-pagination.w{
     text-align: right;
-    width: 1195px;
+    width: 1175px;
     left: 50%;
     margin-left: -600px;
 }
@@ -128,3 +136,46 @@
     width:10px;
     height: 10px;
 }
+/* index pro*/
+#indexProD{}
+#indexProD .w{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#indexProD .floor{
+    margin-top: 24px;
+}
+#indexProD h2{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: normal;
+    align-items: baseline;
+    margin-bottom: 7px;
+}
+#indexProD h2 .tit{
+    border-left: 4px solid;
+    line-height: 1;
+    padding-left: 5px;
+}
+#indexProD .more{
+    font-size: 13px;
+}
+#indexProD img{
+    display: block;
+}
+#indexProD .d1{
+    display: flex;
+    border: 1px solid;
+}
+#indexProD .d2{
+    border-left: 1px solid;
+}
+#indexProD .d2 a + a{
+    border-top: 1px solid;
+}
+#indexProD a{display: block;}
+#indexProD .f_yellow,#indexProD .f_yellow a{color: #caa700;}
+#indexProD .f_pink,#indexProD .f_pink a{color: #d0515f;}
+#indexProD .f_origin,#indexProD .f_origin a{color: #df6b3a;}
