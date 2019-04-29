@@ -9,6 +9,32 @@
         <a href="">充值</a>
         <a href="" class="shopCart">购物车</a>
         <a href="" class="customer">客服</a>
-        <div class="login">登陆</div>
-        <div class="exit"><img src="/images/user.png" alt="user"></div>
+        <a href="/login.html" class="login">登陆</a>
+        <div class="exit">
+            <img src="/images/user.png" alt="user">
+            <div class="exitTan" style="display: none;">
+                <ul class="ul1">
+                    <li class="userName">
+                        <a href="">
+                            <span class="s1">王可可</span>
+                            <span class="orange">[一星会员]</span>
+                        </a>
+                    </li>
+                    <li class="money">
+                        可用余额：<b class="red">20000.00</b> 元
+                    </li>
+                </ul>
+                <div class="btnD">
+                    <a href="">退出登录</a>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        $(function () {
+            // 退出登录
+            $(".exit").click(function () {
+                $(".exitTan").slideToggle();
+            })
+        })
+    </script>
