@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线下单</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/css/com.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<!-- 头部 -->
+<div id="header"></div>
+<!-- 主内容 -->
+<div id="main" class="orderD">
+    <div id="orderMenu">
+    </div>
+    <form class="orderMain">
+        <!- -筛选 -->
+        <div class="o_m_top">
+            <div class="position">
+                <a href="/" class="p_a">首页</a>
+                <span class="blue">在线下单</span>
+                <a href="" class="more blue jt right">查看产品图</a>
+            </div>
+            <div class="filter">
+                <div class="d1">筛选：</div>
+                <div class="d2">
+                    <label>
+                        <span>价格类型</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>封面材质</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>主题</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>件数</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>相册尺寸</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>相框尺寸</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>套系包含</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>风格</span>
+                        <select name="">
+                            <option value="0">不限</option>
+                            <option value="1">选项1</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- 选择 -->
+        <ul class="o_m_main">
+            <li>
+                <div class="tit">名称</div>
+                <div class="nr hasImg">
+                    <label>
+                        <input type="radio" name="name" value="1">
+                        <span>安琪儿套系 <span class="checkI">[图]</span></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="name" value="1">
+                        <span>雅典娜套系 <i>三星以上</i> <span class="checkI">[图]</span></span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="tit">颜色</div>
+                <div class="nr">
+                    <label>
+                        <input type="radio" name="color" value="1">
+                        <span>白色</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="1">
+                        <span>灰色</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="tit">颜色</div>
+                <div class="nr">
+                    <label>
+                        <input type="radio" name="color" value="1">
+                        <span>白色</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="1">
+                        <span>灰色</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="tit">颜色</div>
+                <div class="nr">
+                    <label>
+                        <input type="radio" name="color" value="1">
+                        <span>白色</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="1">
+                        <span>灰色</span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <!--  图片展示 -->
+        <ul class="o_m_main2">
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+            <li>
+                <div class="d1">
+                    <img src="/images/order/pro.jpg" alt="产品名称">
+                    <div>简爱套系</div>
+                </div>
+            </li>
+        </ul>
+        <!-- 购买 -->
+        <div class="o_m_order">
+            <!-- 说明 -->
+            <div class="dis">制作说明：雅典娜套系由20寸实木相框*1+12寸PU相册*1+7寸摆台*2组成，20寸相框照片尺寸28*40cm(四周留0.5cm出血），12寸PU相册内页共10P照片尺寸42.5*29.5cm（四周留 0.3cm出血），7寸摆台照片尺寸10.5*15.5cm(四周留0.3cm出血）。</div>
+            <div class="d2">
+                <!-- 备注 -->
+                <div class="remark">
+                    <div>备注</div>
+                    <textarea name="" id="" cols="30" rows="8" placeholder="请填写您所要备注的信息（限500字  非必填项）"></textarea>
+                    <div class="proId">产品ID：12345</div>
+                </div>
+                <!-- 提交订单 -->
+                <ul class="info">
+                    <li>
+                        <span class="s1">单价:</span>
+                        <span class="s2">58.00</span>
+                    </li>
+                    <li>
+                        <span class="s1">会员价:</span>
+                        <span class="s2"><b class="red">48.00</b></span>
+                    </li>
+                    <li>
+                        <span class="s1">数量:</span>
+                        <span class="s2">
+                            <img src="/images/subtract.png" class="subtract" alt="减">
+                            <input type="text" value="1" id="num">
+                            <img src="/images/add.png" class="add" alt="加">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="s1"><b>总金额:</b></span>
+                        <span class="s2">
+                            <span class="red">￥<span class="font30">58.00</span></span>
+                        </span>
+                    </li>
+                    <li>
+                        <button class="btnAn">提交订单</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+<!--<div class="tan">-->
+<!--</div>-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="../../images/order/pro2.jpg" alt="pro">
+        </div>
+        <div class="swiper-slide"><img src="../../images/order/pro2.jpg" alt="pro"></div>
+        <div class="swiper-slide"><img src="../../images/order/pro2.jpg" alt="pro"></div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script>
+    $(function(){
+        $("#header").load('/pages/com/header.html',function () {
+            $("#header a[name=order]").addClass('act');
+        });
+        $("#orderMenu").load('/pages/com/orderMenu.html',function () {
+            $("#orderMenu a[name=order]").addClass('act');
+        });
+        // 查看图片
+        $(".checkI").click(function (e) {
+            e.preventDefault();
+        });
+
+
+
+        // 查看图片轮播
+        var swiper = new Swiper('.swiper-container');
+
+
+        // 数量加减
+        var numObj = $("#num");
+        var num = numObj.val();
+        $(".subtract").click(function () {
+            if(num>1){
+                numObj.val(--num)
+            }
+        })
+        $(".add").click(function () {
+                numObj.val(++num)
+        })
+        // $("#footer").load('/pages/com/footer.html');
+    });
+</script>
+</body>
+</html>
