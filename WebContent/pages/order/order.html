@@ -25,7 +25,7 @@
             <div class="position">
                 <a href="/" class="p_a">首页</a>
                 <span class="blue">在线下单</span>
-                <a href="" class="more blue jt right">查看产品图</a>
+                <a href="javascript:;" class="more blue jt right">查看产品图</a>
             </div>
             <div class="filter">
                 <div class="d1">筛选：</div>
@@ -145,7 +145,7 @@
             </li>
         </ul>
         <!--  图片展示 -->
-        <ul class="o_m_main2">
+        <ul class="o_m_main2" style="display:none;">
             <li>
                 <div class="d1">
                     <img src="/images/order/pro.jpg" alt="产品名称">
@@ -238,21 +238,36 @@
         </div>
     </form>
 </div>
-<!--<div class="tan">-->
-<!--</div>-->
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="../../images/order/pro2.jpg" alt="pro">
+<div class="tan orderTan" style="display:none;">
+    <div class="swiper-container">
+        <div class="tit">产品展示</div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/images/order/pro2.jpg" alt="pro">
+            </div>
+            <div class="swiper-slide"><img src="/images/order/pro2.jpg" alt="pro"></div>
+            <div class="swiper-slide"><img src="/images/order/pro2.jpg" alt="pro"></div>
         </div>
-        <div class="swiper-slide"><img src="../../images/order/pro2.jpg" alt="pro"></div>
-        <div class="swiper-slide"><img src="../../images/order/pro2.jpg" alt="pro"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="close2"><span class="btnAn">关闭</span></div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+
 </div>
 
+<script src="/js/swiper/swiper.min.js"></script>
 <script>
+
+    var mySwiper = new Swiper ('.swiper-container', {
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        observer:true,
+        observeParents:true,
+    })
     $(function(){
         $("#header").load('/pages/com/header.html',function () {
             $("#header a[name=order]").addClass('act');
@@ -260,16 +275,29 @@
         $("#orderMenu").load('/pages/com/orderMenu.html',function () {
             $("#orderMenu a[name=order]").addClass('act');
         });
-        // 查看图片
+        // 切换查看方法
+        $(".position .more").click(function () {
+            var _this = $(this);
+            $(".o_m_main").slideToggle(0,function () {
+                if($(this).is(":visible")){_this.html('查看产品图');}
+            });
+            $(".o_m_main2").slideToggle(0,function () {
+                if($(this).is(":visible")){_this.html('返回产品列表');}
+            });
+        })
+
+        // 查看图片(弹窗)
         $(".checkI").click(function (e) {
             e.preventDefault();
+            var _index = $(this).parents("label").index();
+            console.log(_index);
+            $(".orderTan").show();
+            mySwiper.update();//更新弹窗内的轮播图
+            mySwiper.slideTo(_index,0);//切换到第指定slider
         });
-
-
-
-        // 查看图片轮播
-        var swiper = new Swiper('.swiper-container');
-
+        $(".close2").click(function () {
+            $(this).parents(".tan").hide();
+        })
 
         // 数量加减
         var numObj = $("#num");
@@ -283,7 +311,9 @@
                 numObj.val(++num)
         })
         // $("#footer").load('/pages/com/footer.html');
+
     });
+
 </script>
 </body>
 </html>

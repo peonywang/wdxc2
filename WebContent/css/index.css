@@ -542,3 +542,41 @@ font-size: 14px;
 #main.orderD .o_m_main2 li img{
     width: 100%;
 }
+/*图片展示弹窗*/
+.orderTan{}
+.orderTan .swiper-container{
+    width: 50%;
+    background: #FFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: 740px;
+    overflow: hidden;
+}
+.orderTan .swiper-container .swiper-wrapper{/* padding: 0 10px; *//* box-sizing: border-box; */}
+.orderTan .swiper-container .swiper-slide{
+    text-align: center;
+}
+.orderTan .swiper-container .swiper-slide img{
+    max-width: 80%;
+    max-height: 70vh;
+}
+.orderTan .swiper-container .tit{
+    font-size: 14px;
+    line-height: 3;
+    background: #f4f4f4;
+    padding: 0 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.orderTan .swiper-container .close2{
+    text-align: center;
+    padding: 1em 0;
+}
+.orderTan .swiper-container .close2 .btnAn{
+background: #ddd;
+padding: 0 1em;
+line-height: 2;
+display: inline-block;
+border-radius: 2px;
+cursor: pointer;
+}
