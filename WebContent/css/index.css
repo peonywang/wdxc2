@@ -54,6 +54,7 @@
     margin-right: 1px;
     max-width: 6em;
     flex: 1;
+    height: 82px;
 }
 #header .nav > a.act,
 #header .nav > a:hover{
@@ -67,6 +68,7 @@
     line-height: 1;
     max-width: 2em;
     margin-left: 1em;
+    height: unset;
 }
 #header .nav > a.login:hover {
     background: #FFF;
@@ -76,6 +78,9 @@
     margin-left: 1em;
     position: relative;
 }
+#header .nav .exit .userImg{
+    width: 48px;
+    height: 48px;border-radius: 50%;overflow: hidden;}
 #header .nav .exit a{
     color: #333;
 }
@@ -132,7 +137,7 @@
 #footer .s1 + .s1{
     margin-left: 2em;
 }
-
+#footer.footer2{margin-top: 0;}
 /*index nav*/
 #indexNav{
     background:#FFF;
@@ -360,16 +365,16 @@ font-size: 14px;
     padding:10px 20px;
     background: #FFF;
 }
-#main.orderD .o_m_top .position{
+#main .position{
     background: #f3f3f3;
     line-height: 2.5;
     padding: 0 20px;
     font-size: 14px;
 }
-#main.orderD .o_m_top .position .p_a{
+#main .position .p_a{
     margin-right: .5em;
 }
-#main.orderD .o_m_top .position .p_a:after,.jt:after{
+#main .position .p_a:after,.jt:after{
     content: ">";
     padding-left: 1em;
     font-family: Arial;
@@ -378,7 +383,7 @@ font-size: 14px;
     transform: scale(1,1.7);
 }
 
-#main.orderD .o_m_top .position .more{
+#main .position .more{
     text-decoration: unset;
     font-size: 13px;
 }
@@ -551,6 +556,7 @@ font-size: 14px;
     border-radius: 10px;
     max-width: 740px;
     overflow: hidden;
+    border: 2px solid #b3b3b3;
 }
 .orderTan .swiper-container .swiper-wrapper{/* padding: 0 10px; *//* box-sizing: border-box; */}
 .orderTan .swiper-container .swiper-slide{
@@ -573,10 +579,335 @@ font-size: 14px;
     padding: 1em 0;
 }
 .orderTan .swiper-container .close2 .btnAn{
-background: #ddd;
-padding: 0 1em;
-line-height: 2;
-display: inline-block;
-border-radius: 2px;
-cursor: pointer;
+    background: #ddd;
+    padding: 0 1em;
+    line-height: 2;
+    display: inline-block;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/*购物车*/
+.rmb{
+    /* font-size: 16px; */
+}
+.rmb:before{
+    content: '￥';
+}
+#main.shopCart{
+    padding: 14px;
+    background: #FFF;
+    min-height: 70vh;
+}
+#main.shopCart .tit{
+    font-weight: bold;
+    color: #2672d0;
+    border-bottom: 2px solid #2672d0;
+    padding-bottom: .5em;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#main.shopCart .tit a{
+    text-decoration: unset;
+}
+#main.shopCart .tabD{
+    font-size: 13px;
+    text-align: center;
+}
+#main.shopCart .tabD table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#main.shopCart .shopHead{
+    line-height: 3.5;
+}
+#main.shopCart .shopHead th{
+    padding: 0 1em;
+}
+#main.shopCart input[type='checkbox']{
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+#main.shopCart .shopHead .selectAll + span{
+    position: absolute;
+    margin-left: .5em;
+}
+#main.shopCart .shopName{
+    line-height: 3;
+    background: #f4f5f9;
+    border: 1px solid #e6e7e8;
+}
+.t_left{
+    text-align: left;
+}
+#main.shopCart .shopNr{
+     border: 1px solid #e6e7e8;
+     border-collapse: collapse;
+     background: #fcfcfc;
+     vertical-align: top;
+}
+#main.shopCart .shopNr td{
+    padding: 1.5em 1em;
+}
+#main.shopCart .shopNr .t_left{
+    padding-left: 0;
+}
+#main.shopCart .proI{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #d6d6d6;
+    vertical-align: top;
+    margin-right: 0.5em;
+}
+#main.shopCart .numsD{display: flex;justify-content: center;}
+#main.shopCart .numsD input{width: 3em;margin:0 .5em;padding:0 .5em;text-align: center;}
+#main.shopCart .btnD{
+    display: flex;
+    background: #e9e9ee;
+    padding-left: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main.shopCart .ge{
+    height: 1.2em;
+}
+#main.shopCart u{cursor: pointer;}
+#main.shopCart .btnD .rmb{font-size: 16px;}
+#main.shopCart .btnD .rmb.font30{font-size: 30px;}
+#main.shopCart .btnD .btnAn.noBtnAn{
+    background: #aeb0ba;
+}
+#main.shopCart .btnD .btnAn{
+    line-height: 2.5;
+    padding: 0 2em;
+    font-size: 21px;
+    color: #FFF;
+    margin-left: 20px;
+    background: #ff4400;
+    display: inline-block;
+}
+/* 填写收货地址 */
+#main.shopCart .address{
+    padding: 20px;
+}
+#main.shopCart .address li{
+    margin-bottom: 1em;
+}
+#main.shopCart .address .s1{
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+    font-size: 13px;
+}
+#main.shopCart .address input,
+#main.shopCart .address select{
+    margin-right: 1em;
+    padding: .5em;
+    font-size: 12px;
+}
+#main.shopCart .address .inp{
+    width: 475px;
+}
+#main.shopCart .address .btnD2{
+    padding-left: 5.2em;
+    margin-top: 1em;
+}
+#main.shopCart .address .btnAn{
+    background: #2672d0;
+    color: #FFF;
+    font-size: 14px;
+    padding: .5em 2em;
+    border-radius: 3px;
+}
+#main.shopCart .myAddress{
+    font-size: 13px;
+    padding: 1em 0;
+}
+#main.shopCart .myAddress tr.default{display: table-row;}
+#main.shopCart .myAddress .d1{
+    border: 2px solid #FFF;
+    padding: 8px;
+    position: relative;
+}
+#main.shopCart .myAddress .default .d1{
+border: 2px solid #ff4400;
+}
+#main.shopCart .myAddress .default .d1:after{
+    content: '';
+    background: url("../images/ok.png");
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#main.shopCart .myAddress .default .del{
+    display: none;}
+#main.shopCart .myAddress .default .modify{}
+#main.shopCart .myAddress tr{display: none}
+#main.shopCart .myAddress td{padding: 0.5em 3em 0.5em 0;}
+#main.shopCart .myAddress a{text-decoration: unset;}
+#main .moreAddress{
+    padding-left: 1em;}
+#main .moreAddress:after{
+    content: '>>';
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: -3px;
+    transform: scale(2,1) rotate(90deg);
+    margin-left: 1em;
+    position: relative;
+    top: -1px;
+}
+#main .moreAddress.collapse:after{
+    transform: scale(2,1) rotate(-90deg);
+    top: 1px;
+}
+#main .myAddress .blue{cursor: pointer;}
+
+#main.shopCart .tabD.tabD2{}
+.t_right{text-align: right;}
+#main.shopCart .tabD.tabD2 .t_left{
+    padding-left: 1em;}
+#main.shopCart .tabD.tabD2 .fare{
+    line-height: 3;
+    background: #f4f5f9;
+    border: 1px solid #e6e7e8;
+    text-align: right;
+}
+
+#main.shopCart .tabD.tabD2 .fare .total{
+    padding-right: 2em;
+}
+#main.shopCart .tabD.tabD2 .fare .rmb{
+    width: 110px;
+    display: inline-block;
+}
+#main.shopCart .tabD.tabD2 .shopNr .rmb{
+    padding-right: 1em;
+}
+/*支付弹窗*/
+.payTan{}
+.payTan .tanCont{
+    background: #FFF;
+    border-radius: 10px;
+    max-width: 740px;
+    overflow: hidden;
+    border: 2px solid #b3b3b3;
+}
+.payTan .tit{
+    font-size: 14px;
+    line-height: 3;
+    background: #f4f4f4;
+    padding: 0 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    position: relative;
+}
+.payTan .tit .close2{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(/images/close.png);
+    right: 1em;
+    top: 0.7em;
+    cursor: pointer;
+}
+.payTan .tanNr{
+    text-align: center;
+    padding: 1em 150px 2em;
+}
+.payTan .payErwei{
+    border: 1px solid #dedede;
+}
+.payTan .payErwei img{
+    display: block;
+    width: 237px;
+}
+.payTan .tanCont > .btnD{
+    border-top: 1px solid #d6d6d6;
+    margin: 0 10px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payTan .tanCont > .btnD img{
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+.payTan .btnD .wechat{
+    display: block;
+    background: #65d12a;
+    color: #FFF;
+    line-height: 2.5;
+    border-radius: 2em;
+    margin-top: 1em;
+}
+.payTan .btnD .btnAnRed{
+    background: #ff5757;
+    color:#FFF;
+    line-height: 2;
+    padding: 0 1.5em;
+    border-radius: 5px;
+}
+/*个人中心*/
+#main.userD{
+    flex-direction: row;
+    display: flex;
+    padding: 0;
+}
+#main.userD .userMenu{
+    background: #2f415a;
+}
+#main.userD .userMenu a.act,
+#main.userD .userMenu a:hover{
+    background-color: #3a78c9;
+}
+#main.userD .userMenu a{
+    display: block;
+    color:#FFF;
+    font-weight: bold;
+    padding: 0 2em;
+    line-height: 2.5;
+    margin-bottom: .5em;
+}
+#main.userD .userMain{
+    flex:1;
+}
+#main.userD .u_m_D{
+    background: #FFF;
+    margin: 0 20px;
+    border:1px solid #ced3d8;
+    padding: 40px 30px;
+    min-width: 50vh;
+}
+#main.userD .userInfo{
+    display: flex;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+#main.userD .userImgD{
+    margin-right: 1em;
+}
+#main.userD .userImgD img{
+    display: block;
+    width: 88px;
+    height: 88px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+#main.userD .userInfo .dis{
+    background: #fffaef;
+    line-height: 2.5;
+    padding: 0 1em;
+    margin-top: .5em;
+}
+#main.userD .userInfo .d2{
+    flex:1;
 }

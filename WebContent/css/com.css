@@ -126,11 +126,20 @@ a.blue{
   color: #3e7bcc;
   text-decoration: underline;
 }
+.font12 {
+  font-size: 12px;
+}
 .font13 {
   font-size: 13px;
 }
 .font15 {
   font-size: 15px;
+}
+.font16 {
+  font-size: 16px;
+}
+.font20 {
+  font-size: 20px;
 }
 .font30 {
   font-size: 30px;

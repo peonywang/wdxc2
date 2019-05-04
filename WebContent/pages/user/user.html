@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="/css/com.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<!-- 头部 -->
+<div id="header"></div>
+<!-- 主内容 -->
+<div id="main" class="shopCart userD">
+    <div class="userMenu">
+        <a href="/pages/user/user.html" name="user" class="act">我的账户</a>
+        <a href="">加入会员</a>
+        <a href="/pages/user/myOrder.html" name="myOrder">我的订单</a>
+    </div>
+    <div class="userMain">
+        <div class="position">
+            <a href="/" class="p_a">首页</a>
+            <a href="/pages/user/user.html" class="p_a">账户中心</a>
+            <span class="blue">我的账户</span>
+        </div>
+        <div class="u_m_D">
+            <div class="userInfo">
+                <div class="userImgD">
+                    <img src="/images/user.png" alt="用户头像">
+                </div>
+                <div class="d2">
+                    <b class="red font16">王小小</b>
+                    <p>
+                        2019-03-11 09:25:22 注册成功
+                    </p>
+                    <div class="dis">
+                        您是<span class="red">一星会员</span>，享受*****优惠，充值成为二星会员可以享受更多特权! <a href="" class="red">[去充值]</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="blue moreAddress" style="padding-left: 0;">更多地址</span>
+            </div>
+            <div>
+                <ul class="address">
+                    <li>
+                        <span class="s1">* 收 货 人 ：</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span class="s1">* 手机号码：</span>
+                        <input type="text">
+                        <span class="s1">固定电话：</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span class="s1">* 所在地区：</span>
+                        <select name="">
+                            <option value="">请选择省份</option>
+                        </select>
+                        <select name="">
+                            <option value="">请选择城市</option>
+                        </select>
+                        <select name="">
+                            <option value="">请选择区县</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span class="s1">* 详细地址：</span>
+                        <input type="text" class="inp">
+                    </li>
+                    <li class="btnD2">
+                        <a href="pay.html" class="btnAn">保存地址</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabD" style="margin-top: 2em;">
+                <table>
+                    <tr class="shopName">
+                        <th>收货人</th>
+                        <th>联系电话</th>
+                        <th>收货地区</th>
+                        <th>详细地址</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr class="shopNr">
+                        <td>刘博文</td>
+                        <td>12345678901</td>
+                        <td>北京-北京市 海淀区</td>
+                        <td>学院南路68号吉安大厦C座</td>
+                        <td><a href="" class="blue">修改</a> | <a href="" class="blue">删除</a></td>
+                    </tr>
+                    <tr class="shopNr">
+                        <td>刘博文</td>
+                        <td>12345678901</td>
+                        <td>北京-北京市 海淀区</td>
+                        <td>学院南路68号吉安大厦C座</td>
+                        <td><a href="" class="blue">修改</a> | <a href="" class="blue">删除</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 底部 -->
+<div id="footer"></div>
+<script>
+    $(function(){
+        $("#header").load('/pages/com/header.html');
+        $("#footer").load('/pages/com/footer.html');
+        //address
+        $(".moreAddress").click(function () {
+            $("#main .address").slideToggle(1000,function () {
+                if($("#main .address").is(":visible")){$(".moreAddress").addClass('collapse')}
+                else{$(".moreAddress").removeClass('collapse')}
+            });
+        });
+    });
+</script>
+</body>
+</html>
