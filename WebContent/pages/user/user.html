@@ -15,11 +15,7 @@
 <div id="header"></div>
 <!-- 主内容 -->
 <div id="main" class="shopCart userD">
-    <div class="userMenu">
-        <a href="/pages/user/user.html" name="user" class="act">我的账户</a>
-        <a href="">加入会员</a>
-        <a href="/pages/user/myOrder.html" name="myOrder">我的订单</a>
-    </div>
+    <div id="userMenu" class="userMenu"></div>
     <div class="userMain">
         <div class="position">
             <a href="/" class="p_a">首页</a>
@@ -111,6 +107,10 @@
 <script>
     $(function(){
         $("#header").load('/pages/com/header.html');
+
+        $("#userMenu").load('/pages/com/userMenu.html',function () {
+            $("#userMenu a[name=user]").addClass('act');
+        });
         $("#footer").load('/pages/com/footer.html');
         //address
         $(".moreAddress").click(function () {

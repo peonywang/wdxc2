@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>加入会员</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="/css/com.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<!-- 头部 -->
+<div id="header"></div>
+<!-- 主内容 -->
+<div id="main" class="shopCart userD">
+    <div id="userMenu" class="userMenu"></div>
+    <div class="userMain">
+        <div class="position">
+            <a href="/" class="p_a">首页</a>
+            <a href="/pages/user/user.html" class="p_a">账户中心</a>
+            <span class="blue">加入会员</span>
+        </div>
+        <div class="u_m_D u_m_D2">
+            <div class="userInfo">
+                尊敬的****，您当前是 <span class="red">一星会员</span>，账户可用余额：<b class="red font20">403.00</b>  元
+            </div>
+            <div class="tag">
+                <span class="act">定额充值</span>
+                <span>账户明细</span>
+            </div>
+            <div class="tagD">
+                <div class="tagNr tabD">
+                    <table>
+                        <tr class="recharge">
+                            <td>
+                                <label>
+                                    <input type="radio" name="recharge">
+                                    <span><img src="../../images/user/1k.png" alt="1k"></span>
+                                </label>
+                                <p>一星会员</p>
+                            </td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="recharge">
+                                    <span><img src="../../images/user/5k.png" alt="5k"></span>
+                                </label>
+                                <p>二星会员立返<b class="red">100</b>元</p>
+                            </td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="recharge">
+                                    <span><img src="../../images/user/10k.png" alt="10k"></span>
+                                </label>
+                                <p>三星会员立返<b class="red">300</b>元</p>
+                            </td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="recharge">
+                                    <span><img src="../../images/user/20k.png" alt="20k"></span>
+                                </label>
+                                <p>四星会员立返<b class="red">700</b>元</p>
+                            </td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="recharge">
+                                    <span><img src="../../images/user/50k.png" alt="50k"></span>
+                                </label>
+                                <p>五星会员立返<b class="red">1800</b>元</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><a href="" class="btnAnRed">去充值</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tagNr tabD" style="display: none">
+                    <table>
+                        <tr class="shopName">
+                            <th>时间</th>
+                            <th>收入/支出</th>
+                            <th>状态</th>
+                            <th>备注</th>
+                            <th>余额</th>
+                        </tr>
+                        <tr class="shopNr">
+                            <td>2019-04-11 14:20</td>
+                            <td><span class="green in">500.00</span></td>
+                            <td>北充值</td>
+                            <td>充值1星会员</td>
+                            <td>403.00</td>
+                        </tr>
+                        <tr class="shopNr">
+                            <td>2019-04-11 14:20</td>
+                            <td><span class="red out">500.00</span></td>
+                            <td>北充值</td>
+                            <td>充值1星会员</td>
+                            <td>403.00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 底部 -->
+<div id="footer"></div>
+<script>
+    $(function(){
+        $("#header").load('/pages/com/header.html');
+
+        $("#userMenu").load('/pages/com/userMenu.html',function () {
+            $("#userMenu a[name=joinMember]").addClass('act');
+        });
+        $("#footer").load('/pages/com/footer.html');
+        // 切换
+        $(".tag").delegate('span','click',function () {
+            if($(this).not(".act")){
+                var _index = $(this).index();
+                $(this).addClass('act').siblings('span').removeClass('act');
+                $(".tagD .tagNr").eq(_index).show().siblings(".tagNr").hide();
+            }
+        });
+    });
+</script>
+</body>
+</html>

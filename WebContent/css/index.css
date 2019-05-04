@@ -848,7 +848,7 @@ border: 2px solid #ff4400;
     border-radius: 2em;
     margin-top: 1em;
 }
-.payTan .btnD .btnAnRed{
+.btnAnRed{
     background: #ff5757;
     color:#FFF;
     line-height: 2;
@@ -860,6 +860,7 @@ border: 2px solid #ff4400;
     flex-direction: row;
     display: flex;
     padding: 0;
+    background: #f3f3f3;
 }
 #main.userD .userMenu{
     background: #2f415a;
@@ -884,13 +885,21 @@ border: 2px solid #ff4400;
     margin: 0 20px;
     border:1px solid #ced3d8;
     padding: 40px 30px;
-    min-width: 50vh;
+    min-height: 90vh;
+}
+#main.userD .u_m_D2{
+    padding: 0;
+
+}
+#main.userD .u_m_D2 .userInfo{
+    padding: 20px 20px 0;
 }
 #main.userD .userInfo{
     display: flex;
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 1.5em;
+    align-items: center;
 }
 #main.userD .userImgD{
     margin-right: 1em;
@@ -911,3 +920,125 @@ border: 2px solid #ff4400;
 #main.userD .userInfo .d2{
     flex:1;
 }
+#main.userD .u_m_D .tag{
+    border-bottom: 2px solid #2672d1;
+    padding: 0 1em;
+    margin-bottom: 1.5em;
+}
+#main.userD .u_m_D .tag span{
+    display: inline-block;
+    padding: 0 2em;
+    border-radius: 3px 3px 0 0;
+    line-height: 2.5;
+    color: #2672d1;
+    cursor: pointer;
+    font-size: 13px;
+}
+#main.userD .u_m_D .tag span.act,
+#main.userD .u_m_D .tag span:hover{
+    color: #FFF;
+    background: #2672d1;
+    font-weight: bold;
+}
+#main.userD .u_m_D .tagD{
+    padding: 0 20px 20px;
+}
+#main.userD .u_m_D .tagD label.btnAnRed{
+    width: 130px;
+}
+#main.userD .u_m_D .tagD label span{
+    display: flex;
+    position: relative;
+    height: 68px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    padding: 1px;
+}
+#main.userD .u_m_D .tagD label input[type='radio']{
+    position: absolute;
+    opacity: 0;
+}
+#main.userD .u_m_D .tagD label input[type='radio']:checked + span {
+    border:2px solid red;
+    padding: 0;
+}
+#main.userD .u_m_D .tagD label input[type='radio']:checked + span:after {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url("/images/ok.png") no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#main.userD .u_m_D .tagD .recharge td{
+    padding: 0 1em;
+    line-height: 2.5;
+    font-size: 14px;
+}
+#main.userD .u_m_D .tagD .recharge td b{
+    font-size: 16px;
+}
+#main.userD .u_m_D .tagD .btnAnRed{
+    width: 180px;
+    line-height: 2.5;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 1em;
+}
+#main.userD .u_m_D .tagD .in:before{content: '+ '}
+#main.userD .u_m_D .tagD .out:before{content: '- '}
+#main.userD .m_o_tab .shopNr td{
+    border: 1px solid #e6e7e8;
+    vertical-align: middle;
+}
+.operate a{
+    display: block;
+    line-height: 2.5;
+}
+.btnFile{
+    background: #ff6600;
+    font-weight: bold;
+}
+.btnFile input{
+    position: absolute;
+    opacity: 0;
+}
+.pageTurn{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+}
+.pageTurn .pageNum{
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    margin-right: 1em;
+    background: #ececec;
+    line-height: 28px;
+}
+.pageTurn .pageNum.act{
+    background: #2672d1;
+    color: #FFF;
+}
+.pageTurn .inpPage{
+    width: 3em;
+    height: 28px;
+    box-sizing: border-box;
+    padding: 0 .5em;
+    text-align: center;
+    margin-right: 1em;
+    border: 1px solid #ececec;
+}
+.pageTurn .jump{
+    border: 1px solid #ececec;
+    line-height: 28px;
+    padding: 0 1em;
+    margin-right: 1em;
+}
+.pageTurn .nextPage{}
+.pageTurn .nextPage img{vertical-align: middle;}
