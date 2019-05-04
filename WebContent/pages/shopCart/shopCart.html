@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" href="/css/com.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<!-- 头部 -->
+<div id="header"></div>
+<!-- 主内容 -->
+<div id="main" class="shopCart">
+    <div class="tit">我的购物车</div>
+    <form class="tabD">
+        <table>
+            <!--表头-->
+            <tr class="shopHead">
+                <th><input type="checkbox" class="selectAll"><span>全选</span></th>
+                <th>商品信息</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>全额</th>
+                <th>操作</th>
+            </tr>
+            <!--店铺-->
+            <tr class="shopName">
+                <th><input type="checkbox" class="shopSelecAll" name="order1"></th>
+                <th class="t_left" colspan="5"><b>店铺：</b>双百影楼耗材网</th>
+            </tr>
+            <tr class="shopNr">
+                <td><input type="checkbox" name="order1"></td>
+                <td class="t_left">
+                    <img class="proI" src="/images/order/pro2.jpg" alt="产品图">
+                    雅典娜套系 4件套 白色 INDIGO印刷 20P
+                </td>
+                <td><b class="rmb">78.00</b></td>
+                <td>
+                    <div class="numsD">
+                        <img src="/images/subtract.png" class="subtract" alt="减">
+                        <input type="text" value="1">
+                        <img src="/images/add.png" class="add" alt="加">
+                    </div>
+                </td>
+                <td><b class="red rmb">78.00</b></td>
+                <td><u class="blue del">删除</u></td>
+            </tr>
+            <tr class="shopNr">
+                <td><input type="checkbox" name="order1"></td>
+                <td class="t_left">
+                    <img class="proI" src="/images/order/pro2.jpg" alt="产品图">
+                    雅典娜套系 4件套 白色 INDIGO印刷 20P
+                </td>
+                <td><b class="rmb">78.00</b></td>
+                <td>
+                    <div class="numsD">
+                        <img src="/images/subtract.png" class="subtract" alt="减">
+                        <input type="text" value="1">
+                        <img src="/images/add.png" class="add" alt="加">
+                    </div>
+                </td>
+                <td><b class="red rmb">78.00</b></td>
+                <td><u class="blue del">删除</u></td>
+            </tr>
+            <tr class="ge"><td colspan="6"></td></tr>
+            <!--店铺-->
+            <tr class="shopName">
+                <th><input type="checkbox" class="shopSelecAll" name="order2"></th>
+                <th class="t_left" colspan="5"><b>店铺：</b>双百影楼耗材网</th>
+            </tr>
+            <tr class="shopNr">
+                <td><input type="checkbox" name="order2"></td>
+                <td class="t_left">
+                    <img class="proI" src="/images/order/pro2.jpg" alt="产品图">
+                    雅典娜套系 4件套 白色 INDIGO印刷 20P
+                </td>
+                <td><b class="rmb">78.00</b></td>
+                <td>
+                    <div class="numsD">
+                        <img src="/images/subtract.png" class="subtract" alt="减">
+                        <input type="text" value="1">
+                        <img src="/images/add.png" class="add" alt="加">
+                    </div>
+                </td>
+                <td><b class="red rmb">78.00</b></td>
+                <td><u class="blue del">删除</u></td>
+            </tr>
+            <tr class="shopNr">
+                <td><input type="checkbox" name="order2"></td>
+                <td class="t_left">
+                    <img class="proI" src="/images/order/pro2.jpg" alt="产品图">
+                    雅典娜套系 4件套 白色 INDIGO印刷 20P
+                </td>
+                <td><b class="rmb">78.00</b></td>
+                <td>
+                    <div class="numsD">
+                        <img src="/images/subtract.png" class="subtract" alt="减">
+                        <input type="text" value="1">
+                        <img src="/images/add.png" class="add" alt="加">
+                    </div>
+                </td>
+                <td><b class="red rmb">78.00</b></td>
+                <td><u class="blue del">删除</u></td>
+            </tr>
+            <tr class="ge"><td colspan="6"></td></tr>
+        </table>
+        <div class="btnD">
+            <div class="d1">
+                <input type="checkbox" class="selectAll">
+                <span class="delAll">清空购物车</span>
+            </div>
+            <div class="d2">
+                合计：<b class="red rmb">190</b>
+                <a class="btnAn noBtnAn" type="submit">结算</a>
+                <a href="pay.html" class="btnAn" type="submit">结算</a>
+            </div>
+        </div>
+    </form>
+
+</div>
+<!-- 底部 -->
+<div id="footer" class="footer2"></div>
+<script>
+
+    $(function(){
+        $("#header").load('/pages/com/header.html',function () {
+            $("#header a[name=shopCart]").addClass('act');
+        });
+        $("#footer").load('/pages/com/footer.html');
+
+        // 数量加减
+        $(".subtract").click(function () {
+            var numObj = $(this).parents(".numsD").find("input");
+            var num = numObj.val();
+            if(num>1){
+                numObj.val(--num)
+            }
+        })
+        $(".add").click(function () {
+            var numObj = $(this).parents(".numsD").find("input");
+            var num = numObj.val();
+            numObj.val(++num)
+        })
+    });
+</script>
+</body>
+</html>
