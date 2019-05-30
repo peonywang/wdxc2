@@ -532,13 +532,14 @@ font-size: 14px;
 }
 
 /*图片展示*/
-#main.orderD .o_m_main2{display: flex;flex-wrap: wrap;background: #FFF;border-bottom: 1px solid #f0f0f0;/* height: 400px; *//* overflow-y: scroll; */border-top: 2px solid #2672d1;}
+#main.orderD .o_m_main2{display: flex;flex-wrap: wrap;background: #FFF;border-bottom: 1px solid #f0f0f0;/* height: 400px; *//* overflow-y: scroll; */border-top: 2px solid #2672d1;margin-bottom: 20px;}
 #main.orderD .o_m_main2 li{
     padding: 10px 0;
     border-bottom: 1px solid #f0f0f0;
     flex: 0 0 25%;
     box-sizing: border-box;
     max-width: 300px;
+    overflow: hidden;
 }
 #main.orderD .o_m_main2 li .d1{
     padding: 16px;
@@ -546,6 +547,23 @@ font-size: 14px;
 }
 #main.orderD .o_m_main2 li img{
     width: 100%;
+}
+#main.orderD .o_m_main2 li .p1{display: flex;justify-content: space-between;}
+#main.orderD .o_m_main2 li .p1 .s1{
+    font-size: 14px;
+    color:#2b2b2b;
+}
+#main.orderD .o_m_main2 li .p1 .s2,
+#main.orderD .o_m_main2 li .p2{
+    font-size: 13px;
+}
+#main.orderD .o_m_main2 li .p2 {
+    position: relative;
+    top: .5em;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 /*图片展示弹窗*/
 .orderTan{}
