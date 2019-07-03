@@ -13,14 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6096823">
+    <splitter split-orientation="horizontal" split-proportion="0.55172414">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/WebContent/css/index.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15844">
-                  <caret line="1008" column="48" selection-start-line="1008" selection-start-column="48" selection-end-line="1008" selection-end-column="48" />
+                <state relative-caret-position="16150">
+                  <caret line="1015" column="48" selection-start-line="1015" selection-start-column="48" selection-end-line="1015" selection-end-column="48" />
                   <folding>
                     <element signature="e#26#167#0" />
                     <element signature="e#181#205#0" />
@@ -41,15 +41,14 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/WebContent/pages/order/order.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="335" column="10" lean-forward="true" selection-start-line="335" selection-start-column="10" selection-end-line="335" selection-end-column="10" />
+                <state relative-caret-position="191">
+                  <caret line="167" column="46" selection-start-line="167" selection-start-column="46" selection-end-line="172" selection-end-column="28" />
                   <folding>
                     <element signature="n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#ul#0;n#div#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#0;n#div#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#ul#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#ul#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
@@ -104,8 +103,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/WebContent/css/index.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="497">
-                  <caret line="565" column="28" selection-start-line="565" selection-start-column="28" selection-end-line="565" selection-end-column="28" />
+                <state relative-caret-position="335">
+                  <caret line="504" column="18" selection-start-line="504" selection-start-column="18" selection-end-line="504" selection-end-column="18" />
                   <folding>
                     <element signature="e#26#167#0" />
                     <element signature="e#181#205#0" />
@@ -118,6 +117,12 @@
                     <element signature="e#855#1031#0" />
                     <element signature="e#1076#1104#0" />
                     <element signature="e#1127#1311#0" />
+                    <element signature="e#1341#1386#0" />
+                    <element signature="e#1405#1454#0" />
+                    <element signature="e#1482#1555#0" />
+                    <element signature="e#1576#1596#0" />
+                    <element signature="e#1624#1750#0" />
+                    <element signature="e#1783#1835#0" />
                   </folding>
                 </state>
               </provider>
@@ -194,14 +199,14 @@
         <option value="$PROJECT_DIR$/WebContent/pages/user/user.html" />
         <option value="$PROJECT_DIR$/WebContent/pages/user/joinMember.html" />
         <option value="$PROJECT_DIR$/WebContent/pages/user/myOrder.html" />
-        <option value="$PROJECT_DIR$/WebContent/css/index.css" />
         <option value="$PROJECT_DIR$/WebContent/pages/order/order.html" />
+        <option value="$PROJECT_DIR$/WebContent/css/index.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="109" />
-    <option name="y" value="11" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="296" />
+    <option name="y" value="9" />
     <option name="width" value="930" />
     <option name="height" value="726" />
   </component>
@@ -214,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,6 +254,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,12 +299,15 @@
       <workItem from="1556798500850" duration="42135000" />
       <workItem from="1557442339155" duration="822000" />
       <workItem from="1558576671541" duration="1172000" />
-      <workItem from="1559189342641" duration="1229000" />
+      <workItem from="1559189342641" duration="2056000" />
+      <workItem from="1559541818525" duration="628000" />
+      <workItem from="1560670670139" duration="598000" />
+      <workItem from="1562132558323" duration="3261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89096000" />
+    <option name="totallyTimeSpent" value="94410000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -311,10 +319,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="296" y="9" width="930" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967213" weight="0.21255673" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967213" weight="0.21149425" />
       <window_info id="Structure" order="1" sideWeight="0.5032787" side_tool="true" weight="0.21255673" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -327,7 +335,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.66775775" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24324325" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -491,10 +499,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/pages/order/order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="167" column="46" selection-start-line="167" selection-start-column="46" selection-end-line="172" selection-end-column="28" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15844">
-          <caret line="1008" column="48" selection-start-line="1008" selection-start-column="48" selection-end-line="1008" selection-end-column="48" />
+        <state relative-caret-position="335">
+          <caret line="504" column="18" selection-start-line="504" selection-start-column="18" selection-end-line="504" selection-end-column="18" />
           <folding>
             <element signature="e#26#167#0" />
             <element signature="e#181#205#0" />
@@ -507,21 +529,12 @@
             <element signature="e#855#1031#0" />
             <element signature="e#1076#1104#0" />
             <element signature="e#1127#1311#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/pages/order/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="335" column="10" lean-forward="true" selection-start-line="335" selection-start-column="10" selection-end-line="335" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#div#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#ul#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#ul#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1341#1386#0" />
+            <element signature="e#1405#1454#0" />
+            <element signature="e#1482#1555#0" />
+            <element signature="e#1576#1596#0" />
+            <element signature="e#1624#1750#0" />
+            <element signature="e#1783#1835#0" />
           </folding>
         </state>
       </provider>
