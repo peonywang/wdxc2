@@ -117,9 +117,11 @@
 <script>
     <!-- Initialize Swiper -->
     var swiper = new Swiper('.swiper-container', {
+        autoplay: true,
         pagination: {
             el: '.swiper-pagination',
-        },
+            clickable: true,
+        }
     });
     $(function(){
         $("#header").load('/pages/com/header.html',function () {
