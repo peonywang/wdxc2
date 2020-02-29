@@ -1,0 +1,77 @@
+/* Elements----------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+.side-bar a,.chat-tips i {
+	background-image: url(../images/gdt-img1.png);
+	background-repeat: no-repeat;
+}
+/*右侧悬浮icon*/
+.side-bar {
+	width: 65px;
+	position: fixed;
+	/* bottom: 45%; */
+	top:50%;
+	left: 2px;
+	font-size: 0;
+	z-index: 100;
+}
+.side-bar a {
+	width: 65px;
+	height: 82px;
+	display: inline-block;
+	/*background-color: #dddddd;*/
+	margin-bottom: 2px;
+}
+.side-bar a:hover {
+	background-color: #669fdd;
+}
+.side-bar .icon-qq {
+	background-position: 0 0;
+	position: relative;
+}
+.side-bar .icon-qq:hover .chat-tips {
+	display: block;
+}
+.side-bar .icon-chat {
+	background-position: 0 -82px;
+	position: relative;
+}
+.side-bar .icon-chat:hover .chat-tips {
+	display: block;
+}
+.side-bar .icon-blog {
+	background-position: 0 -164px;
+}
+.side-bar .icon-blog:hover .chat-tips {
+	display: block;
+}
+.side-bar .icon-mail {
+	background-position: 0 -266px;
+}
+.side-bar .icon-totop {
+	background-position: 0 -246px;
+}
+.chat-tips {
+	text-align:left;
+	width:180px;
+	padding: 20px;
+	border: 1px solid #d1d2d6;
+	position: absolute;
+	left: 65px;
+	height:80px;
+	background-color: #ffffff;
+	display: none;
+	line-height: 16px;
+}
+.chat-tips i {
+	width: 9px;
+	display: inline-block;
+	position: absolute;
+	right: -9px;
+	top: 80px;
+	background-position:-88px -350px;
+}
+

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,230 +6,138 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>加入会员</title>
-    <script src="/js/jquery-3.4.0.min.js"></script>
-    <link rel="stylesheet" href="/css/com.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <title>订单列表</title>
+    <link rel="stylesheet" type="text/css" href="/css/webuploader.css" rel="external nofollow" >
+    <link rel="stylesheet" href="../../css/com.css">
+    <link rel="stylesheet" href="../../css/index.css?v=2020-02-18">
+    
+    
+    <script src="../../js/jquery-3.4.0.min.js"></script>
+    <script src="../../js/common.js?v=2020-02"></script>
+    <script src="../../js/jquery.page.js"></script>
+    <script src="../../js/layer/layer.js"></script>
+    <script src="../../js/user/fileCloum.js?v=2020-02-18"></script>
+    <script src="../../js/user/signOrder.js?v=2020-02-18"></script>
+    <script src="../../js/user/after_sales.js?v=2020-02-18"></script>
+    <script src="../../js/user/questionOrder.js?v=2020-02-18"></script>
+    <script src="../../js/user/myOrder.js?v=2020-02-18"></script>
+    <script src="../../js/webuploader.js"></script>
+    
 </head>
+<style>
+.btns{
+	
+}
+.picker_btn{
+	/*  width: 130px;
+    line-height: 2.5;
+    font-size: 16px;
+    display: inline-block; */
+    margin-top: 1em;
+   /*  background: #ff6600; */
+   /*  font-weight: bold;
+    line-height: 18px; */
+    border-radius: 5px;
+    color: #FFF;
+}
+.icon-file{
+	width:50px;
+	height: 50px;
+	display: block;
+	float: left;
+	border:1px solid #d3d3d3;
+	background: url(http://www.qiyinwang.com.cn/images/rar_03.png) no-repeat center;
+}
+
+.progress{
+	width:278px;
+	height: 14px;
+	position:relative;
+	top:4px;
+	display: inline-block;
+	border-radius: 14px;
+	background: #e0e0e0;
+}
+.progressing{
+	width: 10%;
+	height: 100%;
+	display: inline-block;
+	background: #309cf8;
+	border-radius: 14px;
+}
+.file-size{
+	color: #707070;
+	font-size:14px;
+	margin-right: 20px;
+}
+progress {
+    /* border: 1px solid #000; */
+    border-radius: 1rem;
+    -webkit-apperance: none;
+}
+::-webkit-progress-bar {
+  background-color: #eee;
+    border-radius: 1rem;
+}
+::-webkit-progress-value {
+    background-color: orange;
+    border-radius: 1rem;
+}
+</style>
 <body>
 <!-- 头部 -->
 <div id="header"></div>
 <!-- 主内容 -->
 <div id="main" class="shopCart userD">
     <div id="userMenu" class="userMenu"></div>
-    <div class="userMain">
+    <div class="userMain" style="display: none;">
         <div class="position">
             <a href="/" class="p_a">首页</a>
             <a href="/pages/user/user.html" class="p_a">账户中心</a>
-            <span class="blue">加入会员</span>
+            <span class="blue">我的订单</span>
         </div>
         <div class="u_m_D u_m_D2">
             <div class="tag" style="margin-top: 1em;">
+            	<span>问题件</span>
+                <span >未完成订单</span>
                 <span class="act">已支付</span>
                 <span>制作中</span>
                 <span>已发货</span>
+                <span>已签收</span>
+                <span>已收货</span>
+                <span>售后件</span>
+                <span>已回访</span>
+                <a href="/pages/introduce/order_upload.html" class="p_a" style="float: right;color:red;" target="_blank">如何上传文件</a>
             </div>
             <div class="tagD">
-                <div class="tagNr tabD">
+            	<span style="background-color:#e41212; border-radius: 5px;padding: 2px 5px;color: #FFF;cursor: pointer;display: none;" onclick="selectSpan(1)" id="wait">未处理</span>
+            	<span style="color: #2672d1;cursor: pointer;display: none;" onclick="selectSpan(2)" id="over">已处理</span>
+                <div class="tagNr tabD" style="margin-top: 5px;">
                     <table class="m_o_tab">
-                        <tr class="shopName">
-                            <th>订单号</th>
-                            <th>下单时间</th>
-                            <th>商品</th>
-                            <th>价格</th>
-                            <th>制作文件</th>
-                            <th>备注说明</th>
-                            <th>状态</th>
-                            <th colspan="2">操作</th>
-                        </tr>
-                        <tr class="shopNr">
-                            <td rowspan="2">4780673</td>
-                            <td rowspan="2">2017-01-17 18:03</td>
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td><label class="btnAnRed btnFile"><input type="file">上传文件</label></td>
-                            <td></td>
-                            <td rowspan="2">已支付</td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                            <td rowspan="2" class="operate">
-                                <a>取消订单</a>
-                                <a href="" class="blue">订单详情</a>
-                            </td>
-                        </tr>
-                        <tr class="shopNr">
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td>
-                                <img src="/images/user/RAR.png" alt="RAR">
-                                <div>
-                                    文件1.rar
-                                    <div class="jd">7.67MB</div>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                        </tr>
-
-                        <tr class="shopNr">
-                            <td>4780673</td>
-                            <td>2017-01-17 18:03</td>
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td>
-                                <img src="/images/user/RAR.png" alt="RAR">
-                                <div>
-                                    文件1.rar
-                                    <a href="" class="blue">替换</a>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td>已支付</td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                            <td class="operate">
-                                <a>取消订单</a>
-                                <a href="" class="blue">订单详情</a>
-                            </td>
-                        </tr>
+                         
                     </table>
-                    <div class="pageTurn">
-                        <a href="" class="pageNum act">1</a>
-                        <a href="" class="pageNum">2</a>
-                        <input type="text" class="inpPage">
-                        <a href="" class="jump">跳转</a>
-                        <a href="" class="nextPage">
-                            <img src="/images/user/next.png" alt="">
-                        </a>
+                 
+                    <div class="bodBox" style="width:500px; height: 25px; margin-top: 20px;position: relative;left: 40%;">
+                        
                     </div>
+                    
+                   <!-- <div id="uploader" class="wu-example" >
+					    用来存放文件信息
+					    <div>请上传zip,rar格式文件</div>
+					    <div id="thelist" class="uploader-list"></div>
+					    <div class="btns">
+					        <div id="picker" class="picker_btn">选择文件</div>
+					        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+					    </div>
+					</div>  -->
+                    
                 </div>
+                
                 <div class="tagNr tabD" style="display:none;">
                     <table class="m_o_tab">
-                        <tr class="shopName">
-                            <th>订单号</th>
-                            <th>下单时间</th>
-                            <th>商品</th>
-                            <th>价格</th>
-                            <th>制作文件</th>
-                            <th>备注说明</th>
-                            <th>状态</th>
-                            <th colspan="2">操作</th>
-                        </tr>
-                        <tr class="shopNr">
-                            <td rowspan="2">4780673</td>
-                            <td rowspan="2">2017-01-17 18:03</td>
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td></td>
-                            <td></td>
-                            <td rowspan="2">制作中</td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                            <td rowspan="2" class="operate">
-                                <a>取消订单</a>
-                                <a href="" class="blue">订单详情</a>
-                            </td>
-                        </tr>
-                        <tr class="shopNr">
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td>
-                                <img src="/images/user/RAR.png" alt="RAR">
-                                <div>文件1.rar</div>
-                            </td>
-                            <td></td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                        </tr>
-
-                        <tr class="shopNr">
-                            <td>4780673</td>
-                            <td>2017-01-17 18:03</td>
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td>
-                                <img src="/images/user/RAR.png" alt="RAR">
-                                <div>文件1.rar</div>
-                            </td>
-                            <td></td>
-                            <td>已支付</td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                            <td class="operate">
-                                <a>取消订单</a>
-                                <a href="" class="blue">订单详情</a>
-                            </td>
-                        </tr>
+                        
                     </table>
-                    <div class="pageTurn">
-                        <a href="" class="pageNum act">1</a>
-                        <a href="" class="pageNum">2</a>
-                        <input type="text" class="inpPage">
-                        <a href="" class="jump">跳转</a>
-                        <a href="" class="nextPage">
-                            <img src="/images/user/next.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="tagNr tabD" style="display:none;">
-                    <table class="m_o_tab">
-                        <tr class="shopName">
-                            <th>订单号</th>
-                            <th>下单时间</th>
-                            <th>商品</th>
-                            <th>价格</th>
-                            <th>制作文件</th>
-                            <th>备注说明</th>
-                            <th>状态</th>
-                            <th colspan="2">操作</th>
-                        </tr>
-                        <tr class="shopNr">
-                            <td rowspan="2">4780673</td>
-                            <td rowspan="2">2017-01-17 18:03</td>
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td></td>
-                            <td></td>
-                            <td rowspan="2">制作中</td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                            <td rowspan="2" class="operate">
-                                <a>取消订单</a>
-                                <a href="" class="blue">订单详情</a>
-                            </td>
-                        </tr>
-                        <tr class="shopNr">
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td>
-                                <img src="/images/user/RAR.png" alt="RAR">
-                                <div>文件1.rar</div>
-                            </td>
-                            <td></td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                        </tr>
-
-                        <tr class="shopNr">
-                            <td>4780673</td>
-                            <td>2017-01-17 18:03</td>
-                            <td>简爱套系 3件套 灰色 10P</td>
-                            <td>105.00</td>
-                            <td>
-                                <img src="/images/user/RAR.png" alt="RAR">
-                                <div>文件1.rar</div>
-                            </td>
-                            <td></td>
-                            <td>已发货<br>韵达  1234569871</td>
-                            <td><a href="" class="blue">再次购买</a></td>
-                            <td class="operate">
-                                <a>取消订单</a>
-                                <a href="" class="blue">订单详情</a>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="pageTurn">
-                        <a href="" class="pageNum act">1</a>
-                        <a href="" class="pageNum">2</a>
-                        <input type="text" class="inpPage">
-                        <a href="" class="jump">跳转</a>
-                        <a href="" class="nextPage">
-                            <img src="/images/user/next.png" alt="">
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -237,23 +146,90 @@
 </div>
 <!-- 底部 -->
 <div id="footer"></div>
-<script>
-    $(function(){
-        $("#header").load('/pages/com/header.html');
+<!-- 支付弹窗 -->
+<div class="tan payTan" id="panTan" style="display: none">
+    <div class="tanCont">
+        <div class="tit">订单支付 <span class="close2" onclick="closeDiv('panTan');"></span></div>
+        <div class="tanNr">
+            <div style="margin-bottom: .5em;display: none;"><span class="red font12">二维码过期请 <a href="" class="blue">刷新</a> 重新获取</span></div>
+            <div class="payErwei">
+                <img src="/images/erwei.png" id="payCode" alt="扫码支付">
+            </div>
+            <div class="btnD">
+                <span class="btnAn wechat" id="zfName">微信扫描支付</span>
+            </div>
+        </div>
+       <div class="btnD">
+            <span style="font-size: 24px;" id="zfText"><img width="50px" src="/images/alipay.png" alt="支付" id="zfTagIMG" >支付宝支付</span>
+            <a href="javascript:void(0)" class="btnAn btnAnRed" id="zfType" onclick="changePayMent(1)">去支付</a>
+        </div> 
+    </div>
+</div>
+<!-- 提示弹出预存不足 -->
+<div class="tan payTan" id="tsTan1" style="display:none;">
+    <div class="tanCont" style="width: 20%" >
+        <div class="tit">提示<span class="close2" onclick="$(tsTan1).hide();"></span></div>
+        <div class="tanNr" style="padding: 10%">
+            <div style="font-weight: bolder;text-align: left;line-height: 2.5em">
+                <div>您的预存款余额：<font style="color: #ff5757;size: 18px" id="prePrice1">￥100.00</font> </div>
+                <div>还需在线支付：<font style="color: #ff5757;size: 18px" id="payPrice1">￥100.00</font></div>
+            </div>
+        </div>
+       <div class="btnD">
+            <a href="/pages/user/joinMember.html" target="_black" class="btnAn btnAnRed" style="background: #286bd2;margin-left: 10%">去预存</a>
+            <a href="javascript:void(0)" class="btnAn btnAnRed" style="margin-right: 10%;" onclick="showScanCode(0)">去支付</a>
+        </div>
+    </div>
+</div>
+<!-- 提示弹出预存足够 -->
+<div class="tan payTan" id="tsTan2" style="display:none;">
+    <div class="tanCont" style="width: 20%" >
+        <div class="tit">提示<span class="close2" onclick="$(tsTan2).hide();"></span></div>
+        <div class="tanNr" style="padding: 10%">
+            <div style="font-weight: bolder;text-align: left;line-height: 2.5em">
+                <div>您当前的预存款金额：<font style="color: #ff5757;size: 18px" id="prePrice2">￥100.00</font> </div>
+                <div>支付此订单后还剩余：<font style="color: #ff5757;size: 18px" id="payPrice2">￥100.00</font></div>
+            </div>
+        </div>
+       <div class="btnD">
+            <a href="javascript:void(0)" class="btnAn btnAnRed" style="margin-left: 35%;" onclick="showScanCode(0)">去支付</a>
+        </div>
+    </div>
+</div>
 
-        $("#userMenu").load('/pages/com/userMenu.html',function () {
-            $("#userMenu a[name=myOrder]").addClass('act');
-        });
-        $("#footer").load('/pages/com/footer.html');
-        // 切换
-        $(".tag").delegate('span','click',function () {
-            if($(this).not(".act")){
-                var _index = $(this).index();
-                $(this).addClass('act').siblings('span').removeClass('act');
-                $(".tagD .tagNr").eq(_index).show().siblings(".tagNr").hide();
-            }
-        });
-    });
-</script>
+ <input id="uploadInfoInput" type="file" multiple="multiple" accept="image/jpeg" style="display: none;" onchange="selectImageEvent(this)"/>
+	<div class="tan payTan" id="afterSales" style="display: none;">
+		<div class="tanCont" style="width: 20%">
+			<div class="tit">
+				请详细描述申请原因<span class="close2" onclick="$(afterSales).hide();"></span>
+			</div>
+			<div class="tanNr" style="padding: 0 1rem 1rem; text-align: left;">
+				<p style="line-height: 26px;">*订单号: <output id="orderid"></output></p>
+				
+				<p style="line-height: 26px;">*请输入申请理由:</p>
+				<textarea id="remark" rows="5" cols="40"
+					style="border: 1px solid #d8d0d0; border-radius: 5px; width: 95%; line-height: 18px; font-size: 14px; margin-top: 0.23em; padding: 0.2rem;"></textarea>
+				<p style="line-height: 26px;">
+					上传凭证图片（最多9张）:<a href="javascript:void(0)" onclick="addPic()"
+						style="color: blue; font-size: 12px; margin-left: 10px;">添加</a>
+				</p>
+
+				<div id="picDiv" >
+					<!-- <label
+						style="margin-right: 1em; display: inline-block; color: #010101; position: relative; border: 1px solid #fcfcfc; width: 40px; height: 40px;">
+						<img src="/images/product/info/489/1.jpg" alt="缩略图"
+						style="width: 100%; height: 100%;"> <img
+						src="/images/order/del.png" alt="删除"
+						style="right: 0; position: absolute; bottom: 0; cursor: pointer;"
+						onclick="del(this)">
+					</label> -->
+				</div>
+			</div>
+			<div class="btnD" style="border-top: none;">
+				<a href="javascript:void(0)" class="btnAn btnAnRed"
+					style="margin-left: 35%;" onclick="submitAfterSales()">确认提交</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

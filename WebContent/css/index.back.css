@@ -1,19 +1,11 @@
 @charset "UTF-8";
-@import url("gdt-style.css?v=2019-11-26-1");
+
 #header{
     background:#093368;
     color:#FFF;
     padding: 0 14px;
-    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
-    display: -moz-box; /* Firefox 17- */  
-    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
-    display: -moz-flex; /* Firefox 18+ */  
-    display: -ms-flexbox; /* IE 10 */  
-    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ 
-    -webkit-box-pack: space-between;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: space-between;
-    justify-content: space-between;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 #header .logo{
@@ -46,19 +38,13 @@
     width: 6em;
 }
 #header .nav{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;  
     display: flex;
     align-items: center;
+    height: 82px;
+    font-size: 14px;
+    margin-left: 1em;
     justify-content: flex-end;
     flex: 1;
-
-    height: 82px;
-    font-size: .99rem;
-    margin-left: 1em;
 }
 #header .nav > a{
     /* padding: 0 20px; */
@@ -140,13 +126,13 @@
     color: #FFF;
     text-align: center;
     margin-top: 16px;
-    padding: .99rem 0;
+    padding: 24px 0;
     font-size: 12px;
 }
 #footer .s1{
     display: inline-block;
     color: #a9a9a9;
-    margin-top: .7em;
+    margin-top: 1em;
 }
 #footer .s1 + .s1{
     margin-left: 2em;
@@ -230,13 +216,10 @@
     border-top: 1px solid;
 }
 #indexProD a{display: block;}
+#indexProD .f_yellow,#indexProD .f_yellow a{color: #caa700;}
+#indexProD .f_pink,#indexProD .f_pink a{color: #d0515f;}
+#indexProD .f_origin,#indexProD .f_origin a{color: #df6b3a;}
 
-#indexProD .f_xc,#indexProD .f_xc a{color: #d39e4b;}
-#indexProD .f_db,#indexProD .f_db a{color: #39b6de;}
-#indexProD .f_bt,#indexProD .f_bt a{color: #cc4858;}
-#indexProD .f_gh,#indexProD .f_gh a{color: #f16f28;}
-#indexProD .f_hb,#indexProD .f_hb a{color: #dbb502;}
-#indexProD .f_gd,#indexProD .f_gd a{color: #f54343;}
 /*login*/
 .loginD{
     display: flex;
@@ -251,8 +234,6 @@
     margin:30px auto;
     padding: 16px 25px 30px;
     border: 1px solid #e4e4e4;
-    width: 540px;
-    box-sizing: border-box;
 }
 .loginD .tit{
     font-weight: bold;
@@ -260,7 +241,6 @@
 }
 .loginD .imgD{
     padding: 60px 90px;
-    text-align: center;
 }
 .loginD .btnD .dis{
     background: #e3e3e3;
@@ -275,7 +255,7 @@
 }
 .loginD .regist{
 
-/* padding: 25px 40px 0; */
+padding: 25px 40px 0;
 
 font-size: 14px;
 }
@@ -289,16 +269,8 @@ font-size: 14px;
 }
 .loginD .regist .d1{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: stretch;
-    flex-wrap: wrap;
-}
-.loginD .regist .d1::after{
-    /* content: ''; */
-    display: block;
-    /* width: auto; */
-    /* flex: 0; */
-    /* margin-right: auto; */
 }
 .loginD .regist .inp{
     border: 1px solid #e4e4e4;
@@ -316,14 +288,12 @@ font-size: 14px;
     position: absolute;
 }
 .checkboxD label{
+    flex:1;
     text-align: center;
-    margin-bottom: .5em;
-    /* margin-right: 1em; */
-    width: 20%;
 }
-/* .checkboxD label + label{
+.checkboxD label + label{
     margin-left: 1em;
-} */
+}
 .checkboxD .checkbox + span{
     border:1px solid #e4e4e4;
     display: block;
@@ -333,7 +303,6 @@ font-size: 14px;
     overflow: hidden;
     height: 47px;
     width: 75px;
-    margin: auto;
 }
 .checkboxD .checkbox:checked + span {
     border: 2px solid #2672d0;
@@ -383,12 +352,12 @@ font-size: 14px;
 #orderMenu .menuD{
     padding: 10px 15px;
 }
-#orderMenu .menuD > a{display: block;line-height: 2;font-size: .98rem;margin-bottom: 24px;/* padding: 0 2em; */}
+#orderMenu .menuD > a{display: block;line-height: 2;font-size: 14px;margin-bottom: 24px;/* padding: 0 2em; */}
 #orderMenu .menuD > a.act,
 #orderMenu .menuD > a:hover{
     color:#FFF;
     background: #2672d0;
-    /* padding: 0 3em; */
+    padding: 0 3em;
 }
 #main.orderD .orderMain{flex: 1;}
 
@@ -400,7 +369,7 @@ font-size: 14px;
     background: #f3f3f3;
     line-height: 2.5;
     padding: 0 20px;
-    font-size: .98rem;
+    font-size: 14px;
 }
 #main .position .p_a{
     margin-right: .5em;
@@ -440,7 +409,6 @@ font-size: 14px;
     border: 1px solid #dbdbdb;
     height: 2em;
     flex: 1;
-    max-width: 150px;
 }
 #main.orderD .filter .d2 > label{
     flex: 0 0 20%;
@@ -534,7 +502,7 @@ font-size: 14px;
     position: absolute;
     right: 1em;
     z-index: 1;
-    margin-top: -3em;
+    margin-top: -4em;
 }
 #main.orderD .o_m_order .info{
     font-size: 14px;
@@ -601,12 +569,8 @@ font-size: 14px;
     top: .5em;
     width: 100%;
     overflow: hidden;
-    /*white-space: nowrap;禁止换行
-    text-overflow: ellipsis;省略号*/
-    /*显示2行换行*/
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 /*图片展示弹窗*/
 .orderTan{}
@@ -793,7 +757,6 @@ font-size: 14px;
     border: 2px solid #FFF;
     padding: 8px;
     position: relative;
-    cursor: pointer;
 }
 #main.shopCart .myAddress .default .d1{
 border: 2px solid #ff4400;
@@ -938,7 +901,6 @@ border: 2px solid #ff4400;
     padding: 0 2em;
     line-height: 2.5;
     margin-bottom: .5em;
-    min-width: 4em;
 }
 #main.userD .userMain{
     flex:1;

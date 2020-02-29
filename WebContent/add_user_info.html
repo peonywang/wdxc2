@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/com.css">
+    <link rel="stylesheet" href="./css/index.css?v=2019-11-26-1">
+    
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/layer/layer.js"></script>
+    <script src="./js/common.js?v=2019-11-26-1"></script>
+    <script src="../js/user/province.js?v=2019-11-26-1"></script>
+    <script src="../js/user/provinceCityArea.js"></script>
+    <script src="./js/user/add_user_info.js?v=2019-11-26-1"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div id="header"></div>
+<!-- 主内容 -->
+<div id="main" class="loginD">
+    <!--信息填写-->
+    <div class="loginCont">
+        <div class="tit">注册信息填写</div>
+        <form action="" class="regist">
+            <label class="li">
+                <span class="head">姓名</span>
+                <div class="d1">
+                    <input type="text" name="realName" id="realName" class="inp" placeholder="此处请填写您的真实姓名"/>
+                </div>
+            </label>
+
+            <label class="li">
+                <span class="head">手机</span>
+                <div class="d1">
+                    <input type="text" name="phone" id="phone" class="inp" placeholder="此处请填写您的手机号码">
+                </div>
+            </label>
+
+            <label class="li">
+                <span class="head">验证码</span>
+                <div class="d1">
+                    <input type="text" class="inp" id="msmCode" placeholder="此处请填写您的短信验证">
+                    <button class="btnAn" type="button" >获取短信验证</button>
+                </div>
+            </label>
+
+			
+            <label class="li">
+                <span class="head">公司</span>
+                <div class="d1">
+                    <input type="text" class="inp" id="companyName" placeholder="此处请填写您的公司名称">
+                </div>
+            </label>
+            <div class="li">
+			 	<span class="head"> 所在地区：</span>
+	            <select id="prov" class="inp" name="prov" onchange="showCity(this)">
+	                <option value="">请选择省份</option>
+	            </select>
+	            <select id="city" class="inp" onchange="showCountry(this)">
+	                <option value="">请选择城市</option>
+	            </select>
+	            <select id="country" class="inp" onchange="selectCountry(this)">
+	                <option value="">请选择区县</option>
+	            </select>
+			 </div>
+ 			<label class="li">
+                <span class="head">详细地址</span>
+                <div class="d1">
+                    <input type="text" class="inp" id="address" placeholder="此处请填写您详细收货地址">
+                </div>
+            </label>
+            <div class="li">
+                <span class="head">类型</span>
+                <div class="d1 checkboxD">
+                    <label>
+                        <input type="radio" name="myType" value="儿童" class="checkbox">
+                        <span>儿童</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="myType" value="婚纱" class="checkbox">
+                        <span>婚纱</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="myType" value="写真" class="checkbox">
+                        <span>写真</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="myType" value="旅拍" class="checkbox">
+                        <span>旅拍</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="myType" value="其他" class="checkbox">
+                        <span>其他</span>
+                    </label>
+
+                </div>
+            </div>
+            <label class="li">
+                <span class="head">邀请码</span>
+                <div class="d1">
+                    <input type="text" class="inp" id="parentUserid" placeholder="此处请填写您的邀请码">
+                </div>
+            </label>
+            <div class="btnD">
+                <button type="button" class="btnAn">确 认</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 底部 -->
+<div id="footer"></div>
+
+<script>
+    $(function(){
+        $("#header").load('./pages/com/header.html?v=2019-11-26-1');
+        $("#footer").load('./pages/com/footer.html?v=2019-11-26-1');
+    });
+</script>
+</body>
+</html>

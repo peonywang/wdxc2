@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线下单</title>
+   
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../../js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../css/com.css">
+    <link rel="stylesheet" href="../../css/index.css?v=2019-12-19">
+    
+    <script src="../../js/jquery-3.4.0.min.js"></script>
+    <script src="../../js/layer/layer.js"></script>
+    <script src="../../js/common.js?v=2019-12-19"></script>
+      <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #main{
+            flex:1;
+            background: #FFF;
+        }
+    </style>
+</head>
+<body>
+<!-- 头部 -->
+<div id="header"></div>
+<!-- 主内容 -->
+<div id="main" class="orderD" >
+    <div id="orderMenu" style="width: 15%">
+    </div>
+    <form class="orderMain">
+        <!-- 筛选 - -->
+        <div class="o_m_top">
+            <div class="position">
+                <a id="online_href" style="color:#3e7bcc">在线下单</a> &gt;
+                <span id="currentClassName" class="blue"></span>
+                <span id="sampleTiShi" style="margin-left: 2.5rem;display: none;color: red;">您的免费领样次数：<font id="SampleNum" style="font-weight: bold;">0</font>次。
+                	<font style="color: gray;margin-left: 4em">规则：领取样品后该产品今后有两次以上成交订单，会自动增加一次免费领样次数。</font>
+                	<a href="sample.html" style="color: blue;" target="_blank">领样规则</a>
+                </span>
+                <span id="myProductTiShi" style="margin-left: 2.5rem;display: none;color: gray;">此页面为影楼独有定制产品专属区域，在该区域内显示的所有产品其它影楼不可见,开通此功能需要联系客服。</span>
+                <a href="/pages/introduce/order_create.html" class="p_a" style="float: right;color:red;" target="_blank">下单流程</a>
+                <a href="/pages/introduce/file_name.html" class="p_a" style="float: right;color:red;margin-right: 1.5rem" target="_blank">文件命名规则</a>
+            </div>
+        </div>
+        <div class="o_m_mainD" >
+            <!-- 选择 -->
+            <ul class="o_m_main" >
+                
+                <li>
+                    <div class="tit">名称</div>
+                    <div class="nr hasImg" >
+                        
+                    </div>
+                </li>
+                
+            </ul>
+            <!-- 购买 -->
+            <div class="o_m_order">
+               
+                <div class="d2">
+                    <!-- 备注 -->
+                    <div class="remark">
+                    	 <!-- 说明 -->
+                		<div class="dis"></div>
+                
+                        <div>备注</div>
+                        <textarea name="" id="remark" cols="30" rows="3" data-maxlength="200" maxlength="200" placeholder="请填写您所要备注的信息（限200字  非必填项）"></textarea>
+                        <div class="proId">产品ID：12345</div>
+                        <div class="num" id="textAraeLength">200/200</div>
+                    </div>
+                    <!-- 提交订单 -->
+                    <ul class="info"  style="display: none;">
+                        <li>
+                            <span class="s1">售价:</span>
+                            <span class="s2" id="price">58.00</span>
+                        </li>
+                        <li>
+                            <span class="s1" style="font-size: 1.1rem;color: #f13b1d;">会员价:</span>
+                            <span class="s2" style="font-size: 1.1rem;color: #f13b1d;" id="memberPrice"><b class="red">48.00</b></span>
+                        </li>
+                        <li>
+                            <span class="s1">数量:</span>
+                            <span class="s2">
+	                            <img src="/images/subtract.png" class="subtract" alt="减">
+	                            	<input type="text" value="1" id="num" onkeyup="reSetNum(this)" onafterpaste="reSetNum(this)">
+	                            <img src="/images/add.png" class="add" alt="加">
+	                        </span>
+                        </li>
+                        <li>
+                            <span class="s1"><b>总金额:</b></span>
+                            <span class="s2">
+                            <span class="red">￥<span class="font30" id="totalPrice">58.00</span></span>
+                        </span>
+                        </li>
+                        <li>
+                            <button class="btnAn" type="button" onclick="addCart()">加入购物车</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="layerInput" style="display:none;padding-left: 50px;padding-top: 10px;"> 
+        	宽(m)&nbsp;&nbsp;&nbsp;&nbsp;<input id="parameter1" value="" style="width: 100px; margin-bottom: 20px;"/>
+        	<br>高(m)&nbsp;&nbsp;&nbsp;&nbsp;<input id="parameter2" value="" style="width: 100px;"/>
+        	<br><div id="zdyInfo" style="margin-top:5%"></div>
+        </div>
+    </form>
+</div>
+<div id="footer" style="margin-top: 0;"></div>
+
+<div class="tan orderTan" style="display:none;"  id="imageDiv">
+    <div class="swiper-container">
+        <div class="tit">产品展示</div>
+        <div class="swiper-wrapper">
+            
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="close2"><span class="btnAn">关闭</span></div>
+    </div>
+</div>
+
+<script src="../../js/swiper/swiper.min.js"></script>
+<script src="../../js/order/online_order_detail.js?v=2019-12-19"></script>
+</body>
+</html>

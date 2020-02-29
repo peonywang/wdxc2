@@ -14,7 +14,7 @@
 </head>
 <body>
 <!-- 头部 -->
-<div id="header"></div>
+<div id="box"></div>
 <!-- 主内容 -->
 <div id="main">
     <div id="indexNav"></div>
@@ -110,12 +110,12 @@
         </div>
     </div>
 </div>
+<!-- <div id="aaa"></div> -->
 <!-- 底部 -->
 <div id="footer"></div>
-
 <script src="/js/swiper/swiper.min.js"></script>
 <script>
-    <!-- Initialize Swiper -->
+    // <!-- Initialize Swiper -->
     var swiper = new Swiper('.swiper-container', {
         autoplay: true,
         pagination: {
@@ -124,15 +124,19 @@
         }
     });
     $(function(){
-        $("#header").load('/pages/com/header.html',function () {
-            $("#header a[name=index]").addClass('act');
-
+        $("#box").load('/pages/com/header.html',function () {
+            // $("#header a[name=index]").addClass('act');
         });
         $("#indexNav").load('/pages/com/indexNav.html',function () {
             $("#indexNav a[name=nav1]").addClass('act');
         });
         $("#footer").load('/pages/com/footer.html');
     });
+    // var htmlTxt = ''
+    // for(var i = 1; i < 35; i++){
+    //     htmlTxt += '<p>第' + i + '章' + '&nbsp;</p><br>\n'
+    // }
+    // $("#aaa").html(htmlTxt)
 </script>
 </body>
 </html>

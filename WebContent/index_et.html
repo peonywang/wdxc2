@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱、省事、交货快、有保障，影楼后期产品一站式服务平台！</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/com.css">
+    <link rel="stylesheet" href="./css/index.css?v=2019-11-26-1">
+    <script src="./js/crypto-js/crypto-js.js"></script>
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/layer/layer.js"></script>
+    <script src="./js/common.js?v=2019-11-26-1"></script>
+    
+    <style type="text/css">
+    	#indexProD .w {
+		    /* display: flex; */
+		    justify-content: space-between;
+		    flex-wrap: wrap;
+		}
+    	#indexProD .d2 {
+		    display: flex;
+		    border-left: none;
+		    justify-content: space-between;
+		    flex-wrap: wrap;
+		}
+    	#indexProD h2 .tit {
+		    color: #313131;
+		}
+		#indexProD .more {
+		    color: #868686;
+		}
+		#indexProD .d2 a + a {
+		    border-right: 1px solid  #e7e7e7;
+		    border-top: 0;
+		}
+		#indexProD .d1 {
+		    border: none;
+		}
+    </style>
+</head>
+<body>
+<!-- 头部 -->
+<div id="header">
+
+    <div class="logo"><img src="/images/logo2.png" alt="影楼采购网" style="    cursor: pointer;" onclick="javascript:location.href='/index.html'"></div>
+    <!-- <div class="search">
+        <input type="text" placeholder="ID下单">
+    </div> -->
+    <div class="nav">
+        <a href="/index_et.html" name="index" class="act">首页</a>
+        <a href="/pages/order/online_order.html?classid=30" name="order">在线下单</a>
+        <a href="/pages/user/myOrder.html" name="user">我的订单</a>
+        <a href="/pages/user/joinMember.html" name="joinMember">加入会员</a>
+        <a href="/pages/shopCart/shopCart.html" class="shopCart" name="shopCart">购物车</a>
+        <a href="/pages/user/user_prestore.html" name="user_prestore">预存账户</a>
+        <!-- <a href="/pages/order/manuscript_orders.html" name="manuscript_orders">稿件订单</a> -->
+        <a href="/pages/user/user.html" name="account">账户中心</a>
+        <a href="/login.html" class="login" id="login">登陆</a>
+        <div class="exit">
+            <img src="/images/user.png" alt="user" class="userImg" id="userImg" style="display: none;">
+            <div class="exitTan" style="display: none;">
+                <ul class="ul1">
+                    <li class="userName">
+                        <a href="/pages/user/user.html">
+                            <span class="s1" id="nickname">王可可</span>
+                            <span class="orange" id="levelNum">[一星会员]</span>
+                        </a>
+                    </li>
+                    <li class="money" id="heardMoney">
+                        可用余额：<b class="red" id="userPriceBalance">20000.00</b> 元
+                    </li>
+                </ul>
+                <div class="btnD">
+                    <a href="javascript:void(0)" onclick="logout()">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script> 
+            // 退出登录
+            $(".exit").click(function () {
+                $(".exitTan").slideToggle();
+            });
+            var storage=window.localStorage;
+            storage.setItem("token",'MTI2NDk3OjE1ODQ3NzUyNTUwNzU6M2NiZmY3NjIwM2IzZGQzOTU4NWM2NzA2YzUwOWFkMjk=');
+            storage.setItem('userType', '儿童')
+            storage.setItem('user', 'PYxj2MTgH3x+JoZYPfBQZKNtotB/S7VzeEBEv5TdmVBMURj4scDg/2CX5rphg8BIZbgcCPmh1bxfLyLuR1gKXjzd0eGjP1y3FGAvgsIWvzcWUuXuY3pisE65BSG+PfYUIqnOm67IgSEzWXHjylsNjD4iGb5uvphX9hXa3MqwZ7GJzseBLKXMn99+KtrWUAt8GDFTs5DVtbqziio2j38O0ic8kluPWazAidrbGmReVPQbVU8J3ACMtct8jEL4HmpRt9PRNHO3i1XZnfOCAIRUjSSSqWDczGjRdw/dfUeUGVMgM9isgiWJ01Q0SedeuPvbwnVcrFSUHI9nQomM8Kd81GBDvfmeea+O4uY910ZSWJ96aFoxocpwodktp4/X8xGJUJZSN/MD1mxSOAY7u6ErvHFU48/XMInwHiXGPCFz4lQGXhu4vfJ00SDzF/MeSRdKAa9clwbW8ERFdMDzb0TqDcuB7YEz7TF4fGOXZ0AEKUMETpW0C3YeyW56aSwyfgDjSAV0kEI3f37bHQG6jisLjYY+5VsY8uEYjBi/IUYkyu4/xlgPjzziJq0paic1wQEeZvRbgsv4l6KahmvGsVlmclz2bJjz+x4fCxpMqBQmserbAX+xweMXFc0CIlrlYKb/iUNu9jpM2FPPHhQMJwJPOU6C2broJd80JhFocd5L7ig1Yy1bRO48hDAj87taTZhjFXDg2oDxhOZi8FARN+iQ5F5bPsTpDY1fcAX2pbYdIff6/XUXSd4W3TKshSwKTUUnmEyCBquGzPqKW4yo6jr3m2l0lMka8adebx4Vx/9G8L3ZbSUC8bw1md/dtABsKBLDyq4AI5xzR8KEnXU6yr3rDOgAPfqzNrmxjSt8uFeC37n1Pp+8lfmEXVOng95tUL9Qf88Jp2VKPpYPoWR+3w9LZ/0uSzX3AeEvhDpKaAXlLQiED18I5gTaZQs09NMDRdmuzqBlkitIi+rSrQ3FtjSIf4WAxCSWnlhRgxjD5uSwz8P9iITYPsGMiq8XeKyo597K6y7wnp+Yk24jyA0/uZ0ilc7aKltC3jZsBeai0vaFZwZdIxzavxSWuOypRsyeiaTA1vr/eObAxz6I5R6K9WVHXYuk1TmQ1rjj5i8Vcx76SAS3WEE7rxmf5XmYWKxe0L7+ig/pZYqsJ8Eo85tcCfWwapRu//QxlEHYNYhp8zpb9b53npfrAvMAMgCz4NT3JwDeqgDNCA1YQkPrVYn2sQvokZ7wGVXcoQTwmT0yX8Mcc0u84e6jOcVYE6hgBLsKpwrndXQtnJ/ut/Ss15BwXmQInsbiZmCN14ui8YSNRkOD4yg2fH6Ux1LYsaLHsDzMjSOB')
+            //登录页面不拉取用户信息
+           	if(token != undefined){
+           		//从本地缓存取用户信息
+    			if(storage.user != undefined){
+    				var localUser = JSON.parse(getStringByAscDecrypt(storage.user));
+            		showUserInfo(localUser);
+    			}
+           		//获取用户信息
+                getDataFromService("https://www.yl123.cn/user/userInfo","GET","",function(res){
+                   	//console.log(res);
+                   	if(res.code == 1){
+                   		var user = res.obj;
+                   		
+						storage.userType = user.type;
+						storage.user=getStringByAscEncrypt(JSON.stringify(user));
+						
+                   		if(user.type == '婚纱' || user.type == '旅拍'){
+                   			location.href = 'index_hs.html';
+                   		}else  if(user.type != '儿童'){
+                   			location.href = 'index.html';
+                   		}
+                   		
+                   		showUserInfo(user);
+                   		
+                   	}else{
+               			$(".logo").html('<img src="/images/logo2.png" alt="影楼采购网" style="    cursor: pointer;" onclick="javascript:location.href=\'/index.html\'">');
+                		layer.msg(res.msg);
+                	}
+                  });
+           	}
+            
+    </script>
+</div>
+<!-- 主内容 -->
+<div id="main">
+    <div id="indexNav"></div>
+    <!-- Swiper -->
+    <div id="indexBan" class="swiper-container">
+        <div class="swiper-wrapper">
+        	<a class="swiper-slide" href="/pages/order/online_order.html?classid=30" style="background-image: url(./images/yq.jpg)"></a>
+            <a class="swiper-slide" href="/pages/order/online_order.html?classid=30" style="background-image: url(./images/index_et/banner.jpg)"></a>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination w"></div>
+    </div>
+    <!-- pro -->
+    <div id="indexProD">
+        <div class="w">
+            <div class="floor" >
+                <h2>
+                    <span class="tit">儿童套系</span>
+                    <a href="/pages/order/online_order.html?classid=30" class="more">更多套系产品 ></a>
+                </h2>
+                <div class="d1">
+                    <a href="/pages/order/online_order_detail.html?productId=306">
+                        <img src="./images/index_et/1/1_306.jpg" alt="pri1">
+                    </a>
+                    <div class="d2">
+                        <a href="/pages/order/online_order_detail.html?productId=303">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri2">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=300">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=294">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=626">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=625">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=622">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floor" >
+                <h2>
+                    <span class="tit">双面印相册系列</span>
+                    <a href="/pages/order/online_order.html?classid=29" class="more">更多双面印产品 ></a>
+                </h2>
+                <div class="d1">
+                    <a href="/pages/order/online_order_detail.html?productId=564">
+                        <img src="./images/index_et/1/1_306.jpg" alt="pri1">
+                    </a>
+                    
+                    <div class="d2">
+                        <a href="/pages/order/online_order_detail.html?productId=303">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri2">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=300">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=294">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=626">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=625">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                        <a href="/pages/order/online_order_detail.html?productId=622">
+                            <img src="./images/index_et/1/2_303.jpg" alt="pri3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="TypeDiv" class="loginD" style="display: none;">
+<div class="loginCont">
+<form action="" class="regist">
+<div class="li">
+      <span class="head">类型</span>
+      <div class="d1 checkboxD">
+          <label>
+              <input type="radio" name="myType" value="儿童" class="checkbox">
+              <span>儿童</span>
+          </label>
+          <label>
+              <input type="radio" name="myType" value="婚纱" class="checkbox">
+              <span>婚纱</span>
+          </label>
+          <label>
+              <input type="radio" name="myType" value="写真" class="checkbox">
+              <span>写真</span>
+          </label>
+          <label>
+              <input type="radio" name="myType" value="旅拍" class="checkbox">
+              <span>旅拍</span>
+          </label>
+          <label>
+              <input type="radio" name="myType" value="其他" class="checkbox">
+              <span>其他</span>
+          </label>
+
+      </div>
+  </div>
+  </form>
+  </div>
+  </div>
+<!-- 底部 -->
+<div id="footer"></div>
+
+<script src="./js/swiper/swiper.min.js"></script>
+
+<script>
+    // <!-- Initialize Swiper -->
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: {delay:5000},
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+    $(function(){
+        $("#footer").load('./pages/com/footer.html?v=2019-11-26-1');
+        if(isEmpty(userType)){
+     		var typeIndex = layer.open({
+       		  title:'请设置您店铺的主题类型',
+       		  type: 1,
+       		  closeBtn: 0, //不显示关闭按钮
+       		  anim: 2,
+       		  shadeClose: false, //开启遮罩关闭
+       		  area:'600px',
+       		  btn:'确定选择',
+       		  yes:function(){
+       			  var userType = $("input[name='myType']:checked").val();
+       			  console.log("选中类型："+userType);
+       			  
+       			  if(isEmpty(userType)){
+     				  layer.msg("请选择一个类型");
+     				  return;
+     			  }
+       			  storage.userType = userType;
+       			  layer.close(typeIndex);
+       			  if(userType == '儿童'){
+       				  location.href = 'index_et.html';
+       			  }else if(userType == '婚纱' || userType == '旅拍'){
+           			  location.href = 'index_hs.html';
+             	  }else {
+      				  location.href = 'index.html';
+      			  }
+       		  },
+       		  content: $("#TypeDiv")
+       		});
+     	}else{
+    		
+			if (userType == '儿童') {
+
+			} else if (userType == '婚纱'|| userType == '旅拍') {
+				location.href = 'index_hs.html';
+			} else {
+				location.href = 'index.html';
+			}
+		}
+	});
+</script>
+</body>
+</html>
