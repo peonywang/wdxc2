@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/css/com.back.css">
+    <link rel="stylesheet" href="/css/index.back.css">
+</head>
+<body>
+<!-- 头部 -->
+<div id="box"></div>
+<!-- 主内容 -->
+<div id="main">
+    <div id="indexNav"></div>
+    <!-- Swiper -->
+    <div id="indexBan" class="swiper-container">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide" style="background-image: url(/images/index/banner.jpg)"></a>
+            <a class="swiper-slide" style="background-image: url(/images/index/banner.jpg)"></a>
+            <a class="swiper-slide" style="background-image: url(/images/index/banner.jpg)"></a>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination w"></div>
+    </div>
+    <!-- pro -->
+    <div id="indexProD">
+        <div class="w">
+            <div class="floor f_yellow">
+                <h2>
+                    <span class="tit">相册套系</span>
+                    <a href="" class="more">全部 ></a>
+                </h2>
+                <div class="d1">
+                    <a href="">
+                        <img src="/images/index/pro1_1.jpg" alt="pri1">
+                    </a>
+                    <div class="d2">
+                        <a href="">
+                            <img src="/images/index/pro1_2.jpg" alt="pri2">
+                        </a>
+                        <a href="">
+                            <img src="/images/index/pro1_3.jpg" alt="pri3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floor f_pink">
+                <h2>
+                    <span class="tit">单本相册</span>
+                    <a href="" class="more">全部 ></a>
+                </h2>
+                <div class="d1">
+                    <a href="">
+                        <img src="/images/index/pro1_1.jpg" alt="pri1">
+                    </a>
+                    <div class="d2">
+                        <a href="">
+                            <img src="/images/index/pro1_2.jpg" alt="pri2">
+                        </a>
+                        <a href="">
+                            <img src="/images/index/pro1_3.jpg" alt="pri3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floor f_origin">
+                <h2>
+                    <span class="tit">相框</span>
+                    <a href="" class="more">全部 ></a>
+                </h2>
+                <div class="d1">
+                    <a href="">
+                        <img src="/images/index/pro1_1.jpg" alt="pri1">
+                    </a>
+                    <div class="d2">
+                        <a href="">
+                            <img src="/images/index/pro1_2.jpg" alt="pri2">
+                        </a>
+                        <a href="">
+                            <img src="/images/index/pro1_3.jpg" alt="pri3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floor f_origin">
+                <h2>
+                    <span class="tit">摆台</span>
+                    <a href="" class="more">全部 ></a>
+                </h2>
+                <div class="d1">
+                    <a href="">
+                        <img src="/images/index/pro1_1.jpg" alt="pri1">
+                    </a>
+                    <div class="d2">
+                        <a href="">
+                            <img src="/images/index/pro1_2.jpg" alt="pri2">
+                        </a>
+                        <a href="">
+                            <img src="/images/index/pro1_3.jpg" alt="pri3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div id="aaa"></div> -->
+<!-- 底部 -->
+<div id="footer"></div>
+<script src="/js/swiper/swiper.min.js"></script>
+<script>
+    // <!-- Initialize Swiper -->
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+    $(function(){
+        $("#box").load('/pages/com/header.html',function () {
+            // $("#header a[name=index]").addClass('act');
+        });
+        $("#indexNav").load('/pages/com/indexNav.html',function () {
+            $("#indexNav a[name=nav1]").addClass('act');
+        });
+        $("#footer").load('/pages/com/footer.html');
+    });
+    // var htmlTxt = ''
+    // for(var i = 1; i < 35; i++){
+    //     htmlTxt += '<p>第' + i + '章' + '&nbsp;</p><br>\n'
+    // }
+    // $("#aaa").html(htmlTxt)
+</script>
+</body>
+</html>

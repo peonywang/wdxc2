@@ -10,14 +10,22 @@
     display: -moz-flex; /* Firefox 18+ */  
     display: -ms-flexbox; /* IE 10 */  
     display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ 
-    -webkit-box-pack: space-between;
+    /* -webkit-box-pack: space-between;
     -webkit-justify-content: space-between;
     -ms-flex-pack: space-between;
+    justify-content: space-between; */
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
     justify-content: space-between;
+
     align-items: center;
+    /* width: 100%; */
 }
 #header .logo{
     font-size: 28px;
+    flex: 1;
 }
 #header .logo img{
     vertical-align: middle;
@@ -53,12 +61,16 @@
     display: -ms-flexbox;  
     display: flex;
     align-items: center;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
     justify-content: flex-end;
     flex: 1;
 
     height: 82px;
     font-size: .99rem;
-    margin-left: 1em;
+    /* margin-left:auto; */
 }
 #header .nav > a{
     /* padding: 0 20px; */
@@ -69,6 +81,7 @@
     max-width: 6em;
     flex: 1;
     height: 82px;
+    display: inline-block;
 }
 #header .nav > a.act,
 #header .nav > a:hover{
@@ -82,7 +95,7 @@
     line-height: 1;
     max-width: 2em;
     margin-left: 1em;
-    height: unset;
+    height: 1em;
 }
 #header .nav > a.login:hover {
     background: #FFF;
@@ -192,10 +205,19 @@
 }
 /* index pro*/
 #indexProD{}
-#indexProD .w{
+#indexProD.defaultIndex .w{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex; 
+    display: -moz-flex;  
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap:wrap; 
 }
 #indexProD .floor{
     margin-top: 24px;
@@ -366,7 +388,12 @@ font-size: 14px;
 }
 
 /*order*/
-#main.orderD{display: flex;border-top: 1px solid #ced3d8;align-items: stretch;}
+#main.orderD{
+    display: flex;
+    border-top: 1px solid #ced3d8;
+    align-items: stretch;
+    flex:none;
+}
 #orderMenu{
     /* width: 238px; */
     text-align: center;
@@ -618,6 +645,9 @@ font-size: 14px;
     max-width: 740px;
     overflow: hidden;
     border: 2px solid #b3b3b3;
+    position: absolute;
+    left: 25%;
+    top: 5%;
 }
 .orderTan .swiper-container .swiper-wrapper{/* padding: 0 10px; *//* box-sizing: border-box; */}
 .orderTan .swiper-container .swiper-slide{

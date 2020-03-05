@@ -79,7 +79,7 @@ button {
   box-sizing: border-box;
 }
 .w{
-  max-width: 1195px;
+  width: 1193px;
   padding:0 20px;
   margin: 0 auto;
 }
@@ -178,11 +178,21 @@ a.blue{
   left: 0;
   z-index: 11;
   background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -moz-box;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;  
   display: flex;
   -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
 }
 .tan .tan_main {

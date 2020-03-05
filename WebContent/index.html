@@ -1,142 +1,328 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
-    <script src="/js/jquery-3.4.0.min.js"></script>
+    <title>省钱、省事、交货快、有保障，影楼后期产品一站式服务平台！</title>
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="/js/swiper/swiper.min.css">
-    <link rel="stylesheet" href="/css/com.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="./js/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/com.css">
+    <link rel="stylesheet" href="./css/index.css?v=2019-11-26-1">
+
+    <script src="./js/crypto-js/crypto-js.js"></script>
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/layer/layer.js"></script>
+    <script src="./js/common.js?v=2019-11-26-1"></script>
+
 </head>
+
 <body>
-<!-- 头部 -->
-<div id="box"></div>
-<!-- 主内容 -->
-<div id="main">
-    <div id="indexNav"></div>
-    <!-- Swiper -->
-    <div id="indexBan" class="swiper-container">
-        <div class="swiper-wrapper">
-            <a class="swiper-slide" style="background-image: url(/images/index/banner.jpg)"></a>
-            <a class="swiper-slide" style="background-image: url(/images/index/banner.jpg)"></a>
-            <a class="swiper-slide" style="background-image: url(/images/index/banner.jpg)"></a>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination w"></div>
-    </div>
-    <!-- pro -->
-    <div id="indexProD">
-        <div class="w">
-            <div class="floor f_yellow">
-                <h2>
-                    <span class="tit">相册套系</span>
-                    <a href="" class="more">全部 ></a>
-                </h2>
-                <div class="d1">
-                    <a href="">
-                        <img src="/images/index/pro1_1.jpg" alt="pri1">
-                    </a>
-                    <div class="d2">
-                        <a href="">
-                            <img src="/images/index/pro1_2.jpg" alt="pri2">
-                        </a>
-                        <a href="">
-                            <img src="/images/index/pro1_3.jpg" alt="pri3">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="floor f_pink">
-                <h2>
-                    <span class="tit">单本相册</span>
-                    <a href="" class="more">全部 ></a>
-                </h2>
-                <div class="d1">
-                    <a href="">
-                        <img src="/images/index/pro1_1.jpg" alt="pri1">
-                    </a>
-                    <div class="d2">
-                        <a href="">
-                            <img src="/images/index/pro1_2.jpg" alt="pri2">
-                        </a>
-                        <a href="">
-                            <img src="/images/index/pro1_3.jpg" alt="pri3">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="floor f_origin">
-                <h2>
-                    <span class="tit">相框</span>
-                    <a href="" class="more">全部 ></a>
-                </h2>
-                <div class="d1">
-                    <a href="">
-                        <img src="/images/index/pro1_1.jpg" alt="pri1">
-                    </a>
-                    <div class="d2">
-                        <a href="">
-                            <img src="/images/index/pro1_2.jpg" alt="pri2">
-                        </a>
-                        <a href="">
-                            <img src="/images/index/pro1_3.jpg" alt="pri3">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="floor f_origin">
-                <h2>
-                    <span class="tit">摆台</span>
-                    <a href="" class="more">全部 ></a>
-                </h2>
-                <div class="d1">
-                    <a href="">
-                        <img src="/images/index/pro1_1.jpg" alt="pri1">
-                    </a>
-                    <div class="d2">
-                        <a href="">
-                            <img src="/images/index/pro1_2.jpg" alt="pri2">
-                        </a>
-                        <a href="">
-                            <img src="/images/index/pro1_3.jpg" alt="pri3">
-                        </a>
+    <!-- 头部 -->
+    <div id="header">
+
+        <div class="logo"><img src="/images/logo2.png" alt="影楼采购网" style="cursor: pointer;"
+                onclick="javascript:location.href='/index.html'"></div>
+        <!-- <div class="search">
+        <input type="text" placeholder="ID下单">
+    </div> -->
+        <div class="nav">
+            <a href="/index.html" name="index" class="act">首页</a>
+            <a href="/pages/order/online_order.html?classid=30" name="order">在线下单</a>
+            <a href="/pages/user/myOrder.html" name="myOrder">我的订单</a>
+            <a href="/pages/user/joinMember.html" name="joinMember">加入会员</a>
+            <a href="/pages/shopCart/shopCart.html" class="shopCart" name="shopCart">购物车</a>
+            <a href="/pages/user/user_prestore.html" name="user_prestore">预存账户</a>
+            <!-- <a href="/pages/order/manuscript_orders.html" name="manuscript_orders">稿件订单</a> -->
+            <a href="/pages/user/user.html" name="account">账户中心</a>
+            <a href="/login.html" class="login" id="login">登录</a>
+            <div class="exit">
+                <img src="/images/user.png" alt="user" class="userImg" id="userImg" style="display: none;">
+                <div class="exitTan" style="display: none;">
+                    <ul class="ul1">
+                        <li class="userName">
+                            <a href="/pages/user/user.html">
+                                <span class="s1" id="nickname">王可可</span>
+                                <span class="orange" id="levelNum">[一星会员]</span>
+                            </a>
+                        </li>
+                        <li class="money" id="heardMoney">
+                            可用余额：<b class="red" id="userPriceBalance">20000.00</b> 元
+                        </li>
+                    </ul>
+                    <div class="btnD">
+                        <a href="javascript:void(0)" onclick="logout()">退出登录</a>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            // 退出登录
+            $(".exit").click(function () {
+                $(".exitTan").slideToggle();
+            });
+
+            //登录页面不拉取用户信息
+            if (token != undefined) {
+                //从本地缓存取用户信息
+                if (storage.user != undefined) {
+                    var localUser = JSON.parse(getStringByAscDecrypt(storage.user));
+                    showUserInfo(localUser);
+                }
+
+                //同步服务器用户信息
+                getDataFromService("/user/userInfo", "GET", "", function (res) {
+                    console.log(res);
+                    if (res.code == 1) {
+                        var user = res.obj;
+
+                        storage.userType = user.type;
+                        storage.user = getStringByAscEncrypt(JSON.stringify(user));
+
+                        if (user.type == '儿童') {
+                            // location.href = 'index_et.html';
+                        }
+                        else if (user.type == '婚纱' || user.type == '旅拍') {
+                            location.href = 'index_hs.html';
+                        }
+
+                        showUserInfo(user);
+                    } else {
+                        $(".logo").html('<img src="/images/logo2.png" alt="影楼采购网" style="    cursor: pointer;" onclick="javascript:location.href=\'/index.html\'">');
+                        layer.msg(res.msg);
+                    }
+                });
+            }
+        </script>
     </div>
-</div>
-<!-- <div id="aaa"></div> -->
-<!-- 底部 -->
-<div id="footer"></div>
-<script src="/js/swiper/swiper.min.js"></script>
-<script>
-    // <!-- Initialize Swiper -->
-    var swiper = new Swiper('.swiper-container', {
-        autoplay: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        }
-    });
-    $(function(){
-        $("#box").load('/pages/com/header.html',function () {
-            // $("#header a[name=index]").addClass('act');
+    <!-- 主内容 -->
+    <div id="main">
+        <div id="indexNav"></div>
+        <!-- Swiper -->
+        <div id="indexBan" class="swiper-container">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="/pages/order/online_order.html"
+                    style="background-image: url(./images/yq.jpg)"></a>
+                <a class="swiper-slide" href="/pages/order/online_order.html"
+                    style="background-image: url(./images/index/banner.jpg)"></a>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination w"></div>
+        </div>
+        <!-- pro -->
+        <div id="indexProD" class="defaultIndex">
+            <div class="w">
+                <div class="floor f_xc">
+                    <h2>
+                        <span class="tit">相册套系</span>
+                        <a href="/pages/order/online_order.html" class="more">全部 ></a>
+                    </h2>
+                    <div class="d1">
+                        <a href="/pages/order/online_order_detail.html?productId=293">
+                            <img src="./images/index/pro1_1.jpg" alt="pri1">
+                        </a>
+                        <div class="d2">
+                            <a href="/pages/order/online_order_detail.html?productId=306">
+                                <img src="./images/index/pro1_2.jpg" alt="pri2">
+                            </a>
+                            <a href="/pages/order/online_order_detail.html?productId=294">
+                                <img src="./images/index/pro1_3.jpg" alt="pri3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor f_db">
+                    <h2>
+                        <span class="tit">单本相册</span>
+                        <a href="/pages/order/online_order.html" class="more">全部 ></a>
+                    </h2>
+                    <div class="d1">
+                        <a href="/pages/order/online_order_detail.html?productId=315">
+                            <img src="./images/index/pro1_1.jpg" alt="pri1">
+                        </a>
+                        <div class="d2">
+                            <a href="/pages/order/online_order_detail.html?productId=326">
+                                <img src="./images/index/pro1_2.jpg" alt="pri2">
+                            </a>
+                            <a href="/pages/order/online_order_detail.html?productId=312">
+                                <img src="./images/index/pro1_3.jpg" alt="pri3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor f_bt">
+                    <h2>
+                        <span class="tit">摆台系列</span>
+                        <a href="/pages/order/online_order.html" class="more">全部 ></a>
+                    </h2>
+                    <div class="d1">
+                        <a href="/pages/order/online_order_detail.html?productId=275">
+                            <img src="./images/index/pro1_1.jpg" alt="pri1">
+                        </a>
+                        <div class="d2">
+                            <a href="/pages/order/online_order_detail.html?productId=277">
+                                <img src="./images/index/pro1_2.jpg" alt="pri2">
+                            </a>
+                            <a href="/pages/order/online_order_detail.html?productId=278">
+                                <img src="./images/index/pro1_3.jpg" alt="pri3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor f_gh">
+                    <h2>
+                        <span class="tit">挂画系列</span>
+                        <a href="/pages/order/online_order.html" class="more">全部 ></a>
+                    </h2>
+                    <div class="d1">
+                        <a href="/pages/order/online_order_detail.html?productId=271">
+                            <img src="./images/index/pro1_1.jpg" alt="pri1">
+                        </a>
+                        <div class="d2">
+                            <a href="/pages/order/online_order_detail.html?productId=270">
+                                <img src="./images/index/pro1_2.jpg" alt="pri2">
+                            </a>
+                            <a href="/pages/order/online_order_detail.html?productId=264">
+                                <img src="./images/index/pro1_3.jpg" alt="pri3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor f_hb">
+                    <h2>
+                        <span class="tit">海报系列</span>
+                        <a href="/pages/order/online_order.html" class="more">全部 ></a>
+                    </h2>
+                    <div class="d1">
+                        <a href="/pages/order/online_order_detail.html?productId=265">
+                            <img src="./images/index/pro1_1.jpg" alt="pri1">
+                        </a>
+                        <div class="d2">
+                            <a href="/pages/order/online_order_detail.html?productId=267">
+                                <img src="./images/index/pro1_2.jpg" alt="pri2">
+                            </a>
+                            <a href="/pages/order/online_order_detail.html?productId=266">
+                                <img src="./images/index/pro1_3.jpg" alt="pri3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor f_gd">
+                    <h2>
+                        <span class="tit">更多</span>
+                        <a href="/pages/order/online_order.html" class="more">全部 ></a>
+                    </h2>
+                    <div class="d1">
+                        <a href="/pages/order/online_order_detail.html?productId=337">
+                            <img src="./images/index/pro1_1.jpg" alt="pri1">
+                        </a>
+                        <div class="d2">
+                            <a href="/pages/order/online_order_detail.html?productId=281">
+                                <img src="./images/index/pro1_2.jpg" alt="pri2">
+                            </a>
+                            <a href="/pages/order/online_order_detail.html?productId=339">
+                                <img src="./images/index/pro1_3.jpg" alt="pri3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="TypeDiv" class="loginD" style="display: none;">
+        <div class="loginCont">
+            <form action="" class="regist">
+                <div class="li">
+                    <span class="head">类型</span>
+                    <div class="d1 checkboxD">
+                        <label>
+                            <input type="radio" name="myType" value="儿童" class="checkbox">
+                            <span>儿童</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="myType" value="婚纱" class="checkbox">
+                            <span>婚纱</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="myType" value="写真" class="checkbox">
+                            <span>写真</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="myType" value="旅拍" class="checkbox">
+                            <span>旅拍</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="myType" value="其他" class="checkbox">
+                            <span>其他</span>
+                        </label>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer"></div>
+
+    <script src="./js/swiper/swiper.min.js"></script>
+
+    <script>
+        // <!-- Initialize Swiper -->
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: { delay: 5000 },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
         });
-        $("#indexNav").load('/pages/com/indexNav.html',function () {
-            $("#indexNav a[name=nav1]").addClass('act');
+        $(function () {
+            $("#footer").load('./pages/com/footer.html?v=2019-11-26-1');
+
+            if (isEmpty(userType)) {
+                var typeIndex = layer.open({
+                    title: '请设置您店铺的主题类型',
+                    type: 1,
+                    closeBtn: 0, //不显示关闭按钮
+                    anim: 2,
+                    shadeClose: false, //开启遮罩关闭
+                    area: '600px',
+                    btn: '确定选择',
+                    yes: function () {
+                        var userType = $("input[name='myType']:checked").val();
+                        console.log("选中类型：" + userType);
+
+                        if (isEmpty(userType)) {
+                            layer.msg("请选择一个类型");
+                            return;
+                        }
+
+                        storage.userType = userType;
+
+                        layer.close(typeIndex);
+                        if (userType == '儿童') {
+                            // location.href = 'index_et.html';
+                        } else if (userType == '婚纱' || userType == '旅拍') {
+                            location.href = 'index_hs.html';
+                        } else {
+                            location.href = 'index.html';
+                        }
+                    },
+                    content: $("#TypeDiv")
+                });
+            } else {
+                if (userType == '儿童') {
+                    // location.href = 'index_et.html';
+                } else if (userType == '婚纱' || userType == '旅拍') {
+                    location.href = 'index_hs.html';
+                } else {
+
+                }
+            }
+
         });
-        $("#footer").load('/pages/com/footer.html');
-    });
-    // var htmlTxt = ''
-    // for(var i = 1; i < 35; i++){
-    //     htmlTxt += '<p>第' + i + '章' + '&nbsp;</p><br>\n'
-    // }
-    // $("#aaa").html(htmlTxt)
-</script>
+    </script>
 </body>
+
 </html>

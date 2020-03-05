@@ -5,6 +5,7 @@ var uploading = JSON.parse(localStorage.getItem("uploading"));
 
 var state = 2;
 console.log(uploading);
+localStorage.removeItem("uploading");
 $(function(){
 	if(!window.sessionStorage){
         alert("您的浏览器不支持本站上传要求，请升级浏览器版本或者更换其他浏览器");
@@ -14,7 +15,7 @@ $(function(){
     	
     	var uploadDetails = JSON.parse(sessionStorage.getItem("uploadDetail"));
     	
-    	console.log(uploadDetails);
+		console.log(uploadDetails);
     	state = uploadDetails.urlState;
     	currentSelectedOrderid = uploadDetails.orderid;
     	
@@ -31,7 +32,8 @@ $(function(){
 				    	 	'</tr>';
     	
     	$.each(uploadDetails.details,function(index,item){
-    		currentSelectedOrderDetailid = item.id;
+			currentSelectedOrderDetailid = item.id;
+			
     		if(index == 0){
     			orderInfo += '<tr>'+
 					    	 	'<td  rowspan="'+uploadDetails.details.length+'"  >'+(orderid>10000000000?orderid:uploadDetails.orderNumber)+'</td>'+
@@ -104,36 +106,47 @@ function initFileUp(){
             //1、计算文件的唯一标记，用于断点续传  
             (new WebUploader.Uploader()).md5File(file,0,5*1024*1024)  
                 .progress(function(percentage){  
+					alert(1)
                     $("#progressStatus").text("正在读取文件信息...");  
                 })  
                 .then(function(val){  
                     fileMd5=val;  
-                    $("#progressStatus").text("成功获取文件信息...");  
+					$("#progressStatus").text("成功获取文件信息1...");  
                     //获取文件信息后进入下一步  
-                    deferred.resolve();  
+					deferred.resolve();  
+					alert('03')
                 });  
             
             //开始上传
             if(isUploading){
+				alert(3)
+				
         		layer.alert("已有文件正在上传中...");
         		return;
         	}
             if(uploading == null){
+			alert('00')
+
             	uploading = new Array();
             }
             //去重
             var isCanPush = 1;
             uploading.forEach(function(item, index, arr) {
+			alert('01.1')
+
 			    if(item == currentSelectedOrderid) {
 			    	isCanPush = 0;
 			    }
 			});
             if(isCanPush == 1){
+			alert('01.0')
+
             	//记录正在上传的订单ID
                 uploading.push(currentSelectedOrderid);
             }
             console.log("剩余正在上传数组："+uploading);
             localStorage.setItem("uploading",JSON.stringify(uploading));
+			alert('02')
             
         	isUploading = true;
         	$("#fileName").text(file.name);
@@ -144,6 +157,7 @@ function initFileUp(){
         },  
         //时间点2：如果有分块上传，则每个分块上传之前调用此函数  
         beforeSend:function(block){  
+			alert('04')
             var deferred = WebUploader.Deferred(); 
             
             //分片文件上传之前
@@ -154,20 +168,25 @@ function initFileUp(){
         	param.fileMd5 = fileMd5;
         	chunks = block.chunks;
             //验证是否断点续传
-            getDataFromService("/uploadFile/md5Validation","POST",JSON.stringify(param), function(res){
-            	//console.log(res);
-            	if(res.code == 1){
-            		if(res.obj.ifExist){
-            			 //分块存在，跳过不再上传  
-                        deferred.reject();  
-                    }else{  
-                        //分块不存在或不完整，重新发送该分块内容  
-                        deferred.resolve();  
-                    }  
-            	}else{
-            		console.log(res.msg);
-            		deferred.resolve();  
-            	}
+            getDataFromService("https://www.yl123.cn/uploadFile/md5Validation","POST",JSON.stringify(param), function(res){
+				// console.log(res);
+				alert('05')
+				deferred.resolve();
+            	// if(res.code == 1){
+				// 	alert('06')
+            	// 	if(res.obj.ifExist){
+            	// 		 //分块存在，跳过不再上传  
+                //         deferred.reject();  
+                //     }else{  
+				// 		alert('07')
+                //         //分块不存在或不完整，重新发送该分块内容  
+                //         deferred.resolve();  
+                //     }  
+            	// }else{
+				// 	alert('08')
+            	// 	console.log(res.msg);
+            	// 	deferred.resolve();  
+            	// }
             }); 
             this.owner.options.formData.fileMd5 = fileMd5;  
             return deferred.promise();  
@@ -239,13 +258,14 @@ function initFileUp(){
         $("#fileSize").text(uploadSize+"MB/"+fileSize+"MB");
         
         if(percentage == 1){
+			console.log('06')
         	 $("#fileSize").text(fileSize+"MB/"+fileSize+"MB");
         	 $("#progressStatus").text('保存文件中...请稍等')
         }
     });
     
     uploader.on( 'uploadSuccess', function(file,response) {
-    	
+    	console.log('07')
     	//console.log(file,response);
     	
     	//分片文件上传之前
@@ -258,7 +278,7 @@ function initFileUp(){
     	param.size = file.size;
     	param.fileMd5 = fileMd5;
     	// 通知合并分块
-    	var ajaxUrl = "/uploadFile/composeFile";
+    	var ajaxUrl = "https://www.yl123.cn/uploadFile/composeFile";
     	var type = "POST";
     	var callBack =function(res){
     		isUploading = false;
