@@ -78,7 +78,7 @@
     line-height: 82px;
     text-align: center;
     margin-right: 1px;
-    max-width: 6em;
+    /* max-width: 6em; */
     flex: 1;
     height: 82px;
     display: inline-block;
@@ -389,6 +389,11 @@ font-size: 14px;
 
 /*order*/
 #main.orderD{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;  
     display: flex;
     border-top: 1px solid #ced3d8;
     align-items: stretch;
@@ -442,7 +447,7 @@ font-size: 14px;
 }
 
 #main .position .more{
-    text-decoration: unset;
+    text-decoration: none;
     font-size: 13px;
 }
 #main.orderD .filter{
@@ -457,6 +462,11 @@ font-size: 14px;
     white-space: nowrap;
 }
 #main.orderD .filter .d2 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;  
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -541,6 +551,11 @@ font-size: 14px;
     margin-bottom: 20px;
 }
 #main.orderD .o_m_order .d2{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;  
     display: flex;
 }
 #main.orderD .o_m_order .remark{
@@ -565,6 +580,7 @@ font-size: 14px;
 }
 #main.orderD .o_m_order .info{
     font-size: 14px;
+    width: 210px;
 }
 #main.orderD .o_m_order .info li{display: flex;align-items: baseline;margin-bottom: 10px;}
 #main.orderD .o_m_order .info .s1{
@@ -634,6 +650,7 @@ font-size: 14px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    /* height: 4em; */
 }
 /*图片展示弹窗*/
 .orderTan{}
@@ -643,12 +660,19 @@ font-size: 14px;
     box-sizing: border-box;
     border-radius: 10px;
     max-width: 740px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 2px solid #b3b3b3;
     position: absolute;
     left: 25%;
     top: 5%;
+    max-height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
+.orderTan .swiper-container::-webkit-scrollbar{
+    width: 0px;
+    /* 滚动条整体部分，其中的属性: width,height,background,border等。 */
+} 
 .orderTan .swiper-container .swiper-wrapper{/* padding: 0 10px; *//* box-sizing: border-box; */}
 .orderTan .swiper-container .swiper-slide{
     text-align: center;

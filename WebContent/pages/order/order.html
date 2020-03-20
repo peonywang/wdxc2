@@ -21,6 +21,57 @@
             flex:1;
             background: #FFF;
         }
+        .o_m_main2 .s2 {
+            white-space: nowrap;
+            /* float: right; */
+        }
+        .spanCss{
+        	cursor:pointer;
+        	border: 1px solid;
+        	border-radius: 3px;
+        	font-size: 12px;
+        	/* margin-right: 0px; */
+        	padding: 0 0.3em;
+        	display: inline-block;
+        }
+        .p_tit{
+            margin-bottom: .5em;
+        }
+        .morePro{
+            margin-top: 0.7em;
+        }
+        .morePro .spanCss{border-radius: 0px;margin-right: 0px;padding: 1px 2px;line-height: 1;}
+        /* 客服 */
+        .morePro2{
+            margin-top: 6px;
+        }
+        .csd{
+            color: #5c5b5b;
+            font-size: 13px;
+        }
+        .csd img{
+            vertical-align: sub;
+        }
+        .morePro2 .rate{
+            font-size: 11px;
+            line-height: 2;
+            color: #b7b7b7;
+        }
+        .blueSpan{color: #3e7bcc;border-color: #3e7bcc;background: #f3f3f3;}
+        .orgSpan{color: #ff7300;border-color: #ff7300;}
+        .redSpan{color: #ff5c36;border-color: #ff5c36;}
+        /* 屏幕缩小时的样式 注:max-width 里的数值,意思是当屏幕尺寸小于1100px时，应用下面的CSS样式 */
+        @media screen and (max-width: 1100px) {
+            #main.orderD .o_m_main2 li .p1{
+                display: block;
+            }
+            #main.orderD .o_m_main2 li .p1 .s1{
+                margin-bottom: 5px;
+            }
+            .morePro2 .rate{
+                float: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -30,275 +81,371 @@
 <div id="main" class="orderD">
     <div id="orderMenu">
     </div>
-    <form class="orderMain">
-        <!- -筛选 -->
-        <div class="o_m_top">
-            <div class="position">
-                <a href="/" class="p_a">首页</a>
-                <span class="blue">在线下单</span>
-                <a href="javascript:;" class="more blue jt right">查看产品图</a>
-            </div>
-            <div class="filter">
-                <div class="d1">筛选：</div>
-                <div class="d2">
-                    <label>
-                        <span>价格类型</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>封面材质</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>主题</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>件数</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>相册尺寸</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>相框尺寸</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>套系包含</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>风格</span>
-                        <select name="">
-                            <option value="0">不限</option>
-                            <option value="1">选项1</option>
-                        </select>
-                    </label>
+    <div class="orderMain">
+        <form>
+            <!--筛选 -->
+            <div class="o_m_top">
+                <div class="position">
+                    <a href="/" class="p_a">首页</a>
+                    <span class="blue">在线下单</span>
+                    <a href="javascript:;" class="more blue jt right">查看产品图</a>
+                </div>
+                <div class="filter">
+                    <div class="d1">筛选：</div>
+                    <div class="d2">
+                        <label>
+                            <span>价格类型</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>封面材质</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>主题</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>件数</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>相册尺寸</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>相框尺寸</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>套系包含</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>风格</span>
+                            <select name="">
+                                <option value="0">不限</option>
+                                <option value="1">选项1</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="o_m_mainD">
-            <!-- 选择 -->
-            <ul class="o_m_main">
-                <li>
-                    <div class="tit">名称</div>
-                    <div class="nr hasImg">
-                        <label>
-                            <input type="radio" name="name" value="1">
-                            <span>安琪儿套系 <span class="checkI">[图]</span></span>
-                        </label>
-                        <label>
-                            <input type="radio" name="name" value="1">
-                            <span>雅典娜套系 <i>三星以上</i> <span class="checkI">[图]</span></span>
-                        </label>
+            <div class="o_m_mainD">
+                <!-- 选择 -->
+                <ul class="o_m_main">
+                    <li>
+                        <div class="tit">名称</div>
+                        <div class="nr hasImg">
+                            <label>
+                                <input type="radio" name="name" value="1">
+                                <span>安琪儿套系 <span class="checkI">[图]</span></span>
+                            </label>
+                            <label>
+                                <input type="radio" name="name" value="1">
+                                <span>雅典娜套系 <i>三星以上</i> <span class="checkI">[图]</span></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tit">颜色</div>
+                        <div class="nr">
+                            <label>
+                                <input type="radio" name="color" value="1">
+                                <span>白色</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="color" value="1">
+                                <span>灰色</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tit">颜色</div>
+                        <div class="nr">
+                            <label>
+                                <input type="radio" name="color2" value="1">
+                                <span>白色</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="color2" value="1">
+                                <span>灰色</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tit">颜色</div>
+                        <div class="nr">
+                            <label>
+                                <input type="radio" name="color3" value="1">
+                                <span>白色</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="color3" value="1">
+                                <span>灰色</span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 购买 -->
+                <div class="o_m_order">
+                    <!-- 说明 -->
+                    <div class="dis">制作说明：雅典娜套系由20寸实木相框*1+12寸PU相册*1+7寸摆台*2组成，20寸相框照片尺寸28*40cm(四周留0.5cm出血），12寸PU相册内页共10P照片尺寸42.5*29.5cm（四周留 0.3cm出血），7寸摆台照片尺寸10.5*15.5cm(四周留0.3cm出血）。</div>
+                    <div class="d2">
+                        <!-- 备注 -->
+                        <div class="remark">
+                            <div>备注</div>
+                            <textarea name="" id="" cols="30" rows="8" placeholder="请填写您所要备注的信息（限500字  非必填项）"></textarea>
+                            <div class="proId">产品ID：12345</div>
+                            <div class="num">500</div>
+                        </div>
+                        <!-- 提交订单 -->
+                        <ul class="info">
+                            <li>
+                                <span class="s1">单价:</span>
+                                <span class="s2">58.00</span>
+                            </li>
+                            <li>
+                                <span class="s1">会员价:</span>
+                                <span class="s2"><b class="red">48.00</b></span>
+                            </li>
+                            <li>
+                                <span class="s1">数量:</span>
+                                <span class="s2">
+                                <img src="/images/subtract.png" class="subtract" alt="减">
+                                <input type="text" value="1" id="num">
+                                <img src="/images/add.png" class="add" alt="加">
+                            </span>
+                            </li>
+                            <li>
+                                <span class="s1"><b>总金额:</b></span>
+                                <span class="s2">
+                                <span class="red">￥<span class="font30">58.00</span></span>
+                            </span>
+                            </li>
+                            <li>
+                                <button class="btnAn">提交订单</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--  图片展示 style="display:none;" -->
+            <ul class="o_m_main2" style="display: none;">
+               
+                <li id="li_774">
+                    <div class="d1">
+                        <img id="image_774" style="cursor:pointer;" src="/images/order/pro.jpg" alt="产品名称" onclick="showPreview('/images/product/info/774/1.jpg,/images/product/info/774/2.jpg,/images/product/info/774/3.jpg,/images/product/info/774/4.jpg,/images/product/info/774/5.jpg,/images/product/info/774/6.jpg,/images/product/info/774/7.jpg,/images/product/info/774/8.jpg',774)" />
+                        <div class="p_tit">
+                            <div class="p1"><span style="cursor:pointer;">爱丽斯棕两件套（凡品）</span></div>
+                        </div>
+                        <div>
+                            <div class="p1">
+                                <div class="s1">
+                                    <span class="spanCss orgSpan">购买</span>
+                                    <span class="spanCss orgSpan" id="colletion_774" onclick="addMyMyCollection(774)">收藏</span>
+                                    <span class="spanCss orgSpan">对比</span>
+                                </div>
+                                <div class="s2">
+                                    会员
+                                    <span class="red">￥29.9</span> 起
+                                </div>
+                            </div>
+                            <div class="p2" style="cursor:pointer;">
+                                爱丽斯2件套有6*8寸横款相册一本，7寸环保高分子PS摆台一个，包邮。
+                            </div>
+                        </div>
+                        <div class="morePro">
+                            <sapn class="spanCss orgSpan">购买过</sapn>
+                            <sapn class="spanCss blueSpan">自定义LOGO</sapn>
+                            <sapn class="spanCss blueSpan">免费样品</sapn>
+                            <sapn class="spanCss blueSpan">延期赔付</sapn>
+                        </div>
+                        <div class="morePro2">
+                            <a class="csd" href="">凡品数码 <img src="../../images/qq.png" style="width: 15px;" alt="qq"></a>
+                            <div class="rate right">
+                                <span>销售 1234+</span>
+                                <span>回头率 60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="li_774">
+                    <div class="d1">
+                        <img id="image_774" style="cursor:pointer;" src="/images/order/pro.jpg" alt="产品名称" onclick="showPreview('/images/product/info/774/1.jpg,/images/product/info/774/2.jpg,/images/product/info/774/3.jpg,/images/product/info/774/4.jpg,/images/product/info/774/5.jpg,/images/product/info/774/6.jpg,/images/product/info/774/7.jpg,/images/product/info/774/8.jpg',774)" />
+                        <div class="p_tit">
+                            <div class="p1"><span style="cursor:pointer;">爱丽斯棕两件套（凡品）</span></div>
+                        </div>
+                        <div>
+                            <div class="p1">
+                                <div class="s1">
+                                    <span class="spanCss orgSpan">购买</span>
+                                    <span class="spanCss orgSpan" id="colletion_774" onclick="addMyMyCollection(774)">收藏</span>
+                                </div>
+                                <div class="s2">
+                                    会员
+                                    <span class="red">￥29.9</span> 起
+                                </div>
+                            </div>
+                            <div class="p2" style="cursor:pointer;">
+                                爱丽斯2件套有6*8寸横款相册一本，7寸环保高分子PS摆台一个，包邮。
+                            </div>
+                        </div>
+                        <div class="morePro">
+                            <sapn class="spanCss orgSpan">购买过</sapn>
+                            <sapn class="spanCss blueSpan">自定义LOGO</sapn>
+                            <sapn class="spanCss blueSpan">免费样品</sapn>
+                            <sapn class="spanCss blueSpan">延期赔付</sapn>
+                        </div>
+                        <div class="morePro2">
+                            <a class="csd" href="">凡品数码 <img src="../../images/qq.png" style="width: 15px;" alt="qq"></a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="li_774">
+                    <div class="d1">
+                        <img id="image_774" style="cursor:pointer;" src="/images/order/pro.jpg" alt="产品名称" onclick="showPreview('/images/product/info/774/1.jpg,/images/product/info/774/2.jpg,/images/product/info/774/3.jpg,/images/product/info/774/4.jpg,/images/product/info/774/5.jpg,/images/product/info/774/6.jpg,/images/product/info/774/7.jpg,/images/product/info/774/8.jpg',774)" />
+                        <div class="p_tit">
+                            <div class="p1"><span style="cursor:pointer;">爱丽斯棕两件套（凡品）</span></div>
+                        </div>
+                        <div>
+                            <div class="p1">
+                                <div class="s1">
+                                    <span class="spanCss orgSpan">购买</span>
+                                    <span class="spanCss orgSpan" id="colletion_774" onclick="addMyMyCollection(774)">收藏</span>
+                                </div>
+                                <div class="s2">
+                                    会员
+                                    <span class="red">￥29.9</span> 起
+                                </div>
+                            </div>
+                            <div class="p2" style="cursor:pointer;">
+                                爱丽斯2件套有6*8寸横款相册一本，7寸环保高分子PS摆台一个，包邮。
+                            </div>
+                        </div>
+                        <div class="morePro">
+                            <sapn class="spanCss orgSpan">购买过</sapn>
+                            <sapn class="spanCss blueSpan">自定义LOGO</sapn>
+                            <sapn class="spanCss blueSpan">免费样品</sapn>
+                            <sapn class="spanCss blueSpan">延期赔付</sapn>
+                            <sapn class="spanCss blueSpan">自定义LOGO</sapn>
+                            <sapn class="spanCss blueSpan">免费样品</sapn>
+                            <sapn class="spanCss blueSpan">延期赔付</sapn>
+                        </div>
+                        <div class="morePro2">
+                            <a class="csd" href="">凡品数码 <img src="../../images/qq.png" style="width: 15px;" alt="qq"></a>
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <div class="tit">颜色</div>
-                    <div class="nr">
-                        <label>
-                            <input type="radio" name="color" value="1">
-                            <span>白色</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="color" value="1">
-                            <span>灰色</span>
-                        </label>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <div class="tit">颜色</div>
-                    <div class="nr">
-                        <label>
-                            <input type="radio" name="color2" value="1">
-                            <span>白色</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="color2" value="1">
-                            <span>灰色</span>
-                        </label>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <div class="tit">颜色</div>
-                    <div class="nr">
-                        <label>
-                            <input type="radio" name="color3" value="1">
-                            <span>白色</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="color3" value="1">
-                            <span>灰色</span>
-                        </label>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <img src="/images/order/pro.jpg" alt="产品名称">
+                        <div>
+                            <div class="p1">
+                                <div class="s1">简爱套系</div>
+                                <div class="s2">会员<span class="red">￥20</span> 起</div>
+                            </div>
+                            <div class="p2 red">10寸相框+10*10银盐册</div>
+                        </div>
                     </div>
                 </li>
             </ul>
-            <!-- 购买 -->
-            <div class="o_m_order">
-                <!-- 说明 -->
-                <div class="dis">制作说明：雅典娜套系由20寸实木相框*1+12寸PU相册*1+7寸摆台*2组成，20寸相框照片尺寸28*40cm(四周留0.5cm出血），12寸PU相册内页共10P照片尺寸42.5*29.5cm（四周留 0.3cm出血），7寸摆台照片尺寸10.5*15.5cm(四周留0.3cm出血）。</div>
-                <div class="d2">
-                    <!-- 备注 -->
-                    <div class="remark">
-                        <div>备注</div>
-                        <textarea name="" id="" cols="30" rows="8" placeholder="请填写您所要备注的信息（限500字  非必填项）"></textarea>
-                        <div class="proId">产品ID：12345</div>
-                        <div class="num">500</div>
-                    </div>
-                    <!-- 提交订单 -->
-                    <ul class="info">
-                        <li>
-                            <span class="s1">单价:</span>
-                            <span class="s2">58.00</span>
-                        </li>
-                        <li>
-                            <span class="s1">会员价:</span>
-                            <span class="s2"><b class="red">48.00</b></span>
-                        </li>
-                        <li>
-                            <span class="s1">数量:</span>
-                            <span class="s2">
-                            <img src="/images/subtract.png" class="subtract" alt="减">
-                            <input type="text" value="1" id="num">
-                            <img src="/images/add.png" class="add" alt="加">
-                        </span>
-                        </li>
-                        <li>
-                            <span class="s1"><b>总金额:</b></span>
-                            <span class="s2">
-                            <span class="red">￥<span class="font30">58.00</span></span>
-                        </span>
-                        </li>
-                        <li>
-                            <button class="btnAn">提交订单</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--  图片展示 -->
-        <ul class="o_m_main2" style="display:none;">
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="d1">
-                    <img src="/images/order/pro.jpg" alt="产品名称">
-                    <div>
-                        <div class="p1">
-                            <div class="s1">简爱套系</div>
-                            <div class="s2">会员:<span class="red">￥20</span> 起</div>
-                        </div>
-                        <div class="p2 red">10寸相框+10*10银盐册</div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </form>
+        </form>
+    </div>
 </div>
 <div id="footer" style="margin-top: 0;"></div>
 <div class="tan orderTan" style="display:none;">
