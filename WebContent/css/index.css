@@ -2,14 +2,16 @@
 @import url("gdt-style.css?v=2019-11-26-1");
 #header{
     background:#093368;
+    height: 75px;
+    /* background:#112236; */
     color:#FFF;
     padding: 0 14px;
-    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
-    display: -moz-box; /* Firefox 17- */  
-    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
-    display: -moz-flex; /* Firefox 18+ */  
-    display: -ms-flexbox; /* IE 10 */  
-    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */ 
+    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
     /* -webkit-box-pack: space-between;
     -webkit-justify-content: space-between;
     -ms-flex-pack: space-between;
@@ -19,7 +21,6 @@
     -ms-justify-content: space-between;
     -o-justify-content: space-between;
     justify-content: space-between;
-
     align-items: center;
     /* width: 100%; */
 }
@@ -75,13 +76,14 @@
 #header .nav > a{
     /* padding: 0 20px; */
     white-space: nowrap;
-    line-height: 82px;
+    line-height: 75px;
     text-align: center;
     margin-right: 1px;
     /* max-width: 6em; */
     flex: 1;
-    height: 82px;
+    height: 75px;
     display: inline-block;
+    font-size: 14px;
 }
 #header .nav > a.act,
 #header .nav > a:hover{
@@ -140,7 +142,7 @@
     font-family: font_family;
     content: '\e60b';
     margin-right: 0.3em;
-    font-size: 1.3em;
+    font-size: 0.8em;
 }
 #header .nav .customer:before{
     font-family: font_family;
@@ -190,7 +192,7 @@
     display: block;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
 }
 #indexBan .swiper-pagination.w{
@@ -1159,3 +1161,15 @@ border: 2px solid #ff4400;
 }
 .pageTurn .nextPage{}
 .pageTurn .nextPage img{vertical-align: middle;}
+
+/* 关于我们 */
+#introduce{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#introduce .content{
+    position: relative;
+    width: 1920px;
+    overflow: hidden;
+}

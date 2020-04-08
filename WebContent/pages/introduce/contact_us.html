@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>联系我们</title>
+<link rel="stylesheet" href="../../css/com.css">
+    <link rel="stylesheet" href="../../css/index.css?v=2020-02-26">
+    <script src="../../js/jquery-3.4.0.min.js"></script>
+    <script src="../../js/layer/layer.js"></script>
+    <script src="../../js/common.js?v=2020-02-26"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#header").load('/pages/com/header.html?v=2020-02-26', function() {
+    			//$("#header a[name=account]").addClass('act');
+    		});
+    		$("#footer").load('/pages/com/footer.html?v=2020-03-20');
+			$(window).on('resize load', function(){
+				$("#introduce .content").css('left',($(window).width()/2-960))
+			})
+    	});
+    </script>
+</head>
+<body style="text-align: center;background: none;">
+<!-- 头部 -->
+<div id="header"></div>
+<div id="introduce">
+	<div class="content">
+		<img alt="联系我们" src="../../images/introduce/lx_01.jpg" />
+		<img alt="联系我们" src="../../images/introduce/lx_02.jpg" />
+		<img alt="联系我们" src="../../images/introduce/lx_03.jpg" />
+		<img alt="联系我们" src="../../images/introduce/lx_04.jpg" />
+	</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
